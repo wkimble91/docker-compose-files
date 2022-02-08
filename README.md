@@ -16,7 +16,7 @@
 
 ---
 
-## [deluge](https://github.com/deluge-torrent/deluge)
+<h1><a href="https://deluge-torrent.org/images/deluge_logo.png"><img src="https://deluge-torrent.org/images/deluge_logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Deluge" /></a> <a href="https://github.com/deluge-torrent/deluge"> deluge </a></h1>
 
 <p>Deluge is a BitTorrent client that utilizes a daemon/client model. It has various user interfaces available such as the GTK-UI, Web-UI and Console-UI. It uses libtorrent at its core to handle the BitTorrent protocol.</p>
 
