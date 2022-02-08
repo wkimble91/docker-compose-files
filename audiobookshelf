@@ -1,0 +1,19 @@
+---
+version: "2.1"
+services:
+  audiobookshelf:
+    image: advplyr/audiobookshelf
+    container_name: audiobookshelf
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+    volumes:
+      - ./metadata:/metadata
+      - ./config:/config
+      - /mnt/synology-nas/Files/Books/Audiobooks:/audiobooks
+    ports:
+      - 1337:80
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
