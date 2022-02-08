@@ -25,7 +25,7 @@ colors:
     card-shadow: rgba(0, 0, 0, 0.5)
     link: "#3273dc"
     link-hover: "#2e4053"
-    background-image: "../assets/wallpaper-light.jpeg" # Change wallpaper.jpeg to the name of your own custom wall>
+    background-image: "../assets/wallpaper-light.jpeg"
   dark:
     highlight-primary: "#181C3A"
     highlight-secondary: "#181C3A"
