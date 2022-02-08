@@ -142,7 +142,7 @@
 
 <br>
 
-## [plex](https://github.com/plexinc/pms-docker)
+<h1><a href="https://avatars.githubusercontent.com/u/324832"><img src="https://avatars.githubusercontent.com/u/324832" style="width: 40px; max-width: 100%; height: auto;" title="Unbound" /></a> <a href="https://github.com/plexinc/pms-docker"> plex </a></h1>
 
 <p>Plex organizes all of your personal media so you can enjoy it no matter where you are.</p>
 
