@@ -32,7 +32,7 @@
 
 ---
 
-## [homer](https://github.com/bastienwirtz/homer)
+<h1><a href="https://raw.githubusercontent.com/bastienwirtz/homer/main/public/logo.png"><img src="https://raw.githubusercontent.com/bastienwirtz/homer/main/public/logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Homer" /></a> <a href="https://github.com/bastienwirtz/homer"> homer </a></h1>
 
 <p>A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.</p>
 
