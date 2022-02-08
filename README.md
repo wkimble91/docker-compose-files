@@ -24,7 +24,7 @@
 
 ---
 
-<h1><a href="https://avatars2.githubusercontent.com/u/44542094"><img src="https://avatars2.githubusercontent.com/u/44542094" style="width: 40px; max-width: 100%; height: auto;" title="Grocy" /></a> <a href="https://github.com/grocy/grocy"> grocy </a></h1>
+<h1><a href="https://external-preview.redd.it/pR8s5nJY2mwOHaj2DGAqfyrfQp9jNHKibrllvhDmk-o.jpg?auto=webp&s=e15f3ab0ea8d7835e03bc093ff8fb7ab20984c74"><img src="https://external-preview.redd.it/pR8s5nJY2mwOHaj2DGAqfyrfQp9jNHKibrllvhDmk-o.jpg?auto=webp&s=e15f3ab0ea8d7835e03bc093ff8fb7ab20984c74" style="width: 40px; max-width: 100%; height: auto;" title="Grocy" /></a> <a href="https://github.com/grocy/grocy"> grocy </a></h1>
 
 <p>Grocy is a web-based self-hosted groceries & household management solution for your home.</p>
 
