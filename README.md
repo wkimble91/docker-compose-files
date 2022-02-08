@@ -1,6 +1,6 @@
 <h1> docker-compose-files </h1>
 
-<h1><a href="https://www.audiobookshelf.org/Logo.png"><img src="https://www.audiobookshelf.org/Logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Watchtower" /></a> <a href="https://github.com/advplyr/audiobookshelf"> audiobookshelf </a></h1>
+<h1><a href="https://www.audiobookshelf.org/Logo.png"><img src="https://www.audiobookshelf.org/Logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Audiobookshelf" /></a> <a href="https://github.com/advplyr/audiobookshelf"> audiobookshelf </a></h1>
 
 <p>Audiobookshelf is a self-hosted audiobook server for managing and playing your audiobooks.</p>
 
@@ -8,7 +8,7 @@
 
 ---
 
-<h1><a href="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png"><img src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" style="width: 40px; max-width: 100%; height: auto;" title="Watchtower" /></a> <a href="https://github.com/janeczku/calibre-web" calibre-web </a></h1>
+<h1><a href="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png"><img src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" style="width: 40px; max-width: 100%; height: auto;" title="Calibre" /></a> <a href="https://github.com/janeczku/calibre-web"> calibre-web </a></h1>
 
 <p>Calibre-Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.</p>
 
