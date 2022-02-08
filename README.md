@@ -24,13 +24,19 @@
 
 ---
 
+<br>
+
 <h1><a href="https://deluge-torrent.org/images/deluge_logo.png"><img src="https://deluge-torrent.org/images/deluge_logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Deluge" /></a> <a href="https://github.com/deluge-torrent/deluge"> deluge </a></h1>
 
 <p>Deluge is a BitTorrent client that utilizes a daemon/client model. It has various user interfaces available such as the GTK-UI, Web-UI and Console-UI. It uses libtorrent at its core to handle the BitTorrent protocol.</p>
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/deluge/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 <h1><a href="https://external-preview.redd.it/pR8s5nJY2mwOHaj2DGAqfyrfQp9jNHKibrllvhDmk-o.jpg?auto=webp&s=e15f3ab0ea8d7835e03bc093ff8fb7ab20984c74"><img src="https://external-preview.redd.it/pR8s5nJY2mwOHaj2DGAqfyrfQp9jNHKibrllvhDmk-o.jpg?auto=webp&s=e15f3ab0ea8d7835e03bc093ff8fb7ab20984c74" style="width: 40px; max-width: 100%; height: auto;" title="Grocy" /></a> <a href="https://github.com/grocy/grocy"> grocy </a></h1>
 
@@ -38,7 +44,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/grocy/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 <h1><a href="https://raw.githubusercontent.com/bastienwirtz/homer/main/public/logo.png"><img src="https://raw.githubusercontent.com/bastienwirtz/homer/main/public/logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Homer" /></a> <a href="https://github.com/bastienwirtz/homer"> homer </a></h1>
 
@@ -48,7 +58,11 @@
 
 **[configfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/homer/config.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 ## [jackett](https://github.com/Jackett/Jackett)
 
@@ -56,7 +70,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/jackett/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 ## [uptime-kuma](https://github.com/louislam/uptime-kuma)
 
@@ -64,7 +82,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/uptime-kuma/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 ## [mealie](https://github.com/hay-kot/mealie)
 
@@ -72,7 +94,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/mealie/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 ## [nextcloud](https://github.com/nextcloud/server)
 
@@ -80,7 +106,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/nextcloud/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 ## [photoprism](https://github.com/photoprism/photoprism)
 
@@ -88,7 +118,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/photoprism/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 ## [pihole](https://github.com/pi-hole/pi-hole)
 
@@ -100,7 +134,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/pihole/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 ## [plex](https://github.com/plexinc/pms-docker)
 
@@ -108,7 +146,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/plex/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 ## [portainer](https://github.com/portainer/portainer)
 
@@ -116,7 +158,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/portainer/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 ## [radarr](https://github.com/Radarr/Radarr)
 
@@ -124,7 +170,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/radarr/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 ## [shiori](https://github.com/go-shiori/shiori)
 
@@ -132,7 +182,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/shiori/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 ## [sonarr](https://github.com/Sonarr/Sonarr)
 
@@ -140,7 +194,11 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/sonarr/docker-compose.yaml)**
 
+<br>
+
 ---
+
+<br>
 
 <h1><a href="https://raw.githubusercontent.com/containrrr/watchtower/main/logo.png"><img src="https://raw.githubusercontent.com/containrrr/watchtower/main/logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Watchtower" /></a> <a href="https://github.com/containrrr/watchtower"> watchtower </a></h1>
 
