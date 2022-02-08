@@ -24,7 +24,7 @@
 
 ---
 
-## [grocy](https://github.com/grocy/grocy)
+<h1><a href="https://grocy.info/img/grocy_logo.svg"><img src="https://grocy.info/img/grocy_logo.svg" style="width: 40px; max-width: 100%; height: auto;" title="Grocy" /></a> <a href="https://github.com/grocy/grocy"> grocy </a></h1>
 
 <p>Grocy is a web-based self-hosted groceries & household management solution for your home.</p>
 
