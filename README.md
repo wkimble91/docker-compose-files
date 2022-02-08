@@ -100,7 +100,7 @@
 
 <br>
 
-## [nextcloud](https://github.com/nextcloud/server)
+<h1><a href="https://avatars.githubusercontent.com/u/19211038"><img src="https://avatars.githubusercontent.com/u/19211038" style="width: 40px; max-width: 100%; height: auto;" title="Nextcloud" /></a> <a href="https://github.com/nextcloud/server"> nextcloud </a></h1>
 
 <p>Nextcloud offers the industry-leading, on-premises content collaboration platform. Our technology combines the convenience and ease of use of consumer-grade solutions like Dropbox and Google Drive with the security, privacy and control. Also provides syncing capabilities.</p>
 
@@ -112,7 +112,7 @@
 
 <br>
 
-## [photoprism](https://github.com/photoprism/photoprism)
+<h1><a href="https://photoprism.app/static/icons/logo.svg"><img src="https://photoprism.app/static/icons/logo.svg" style="width: 40px; max-width: 100%; height: auto;" title="Photoprism" /></a> <a href="https://github.com/photoprism/photoprism"> photoprism </a></h1>
 
 <p>PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection. It makes use of the latest technologies to tag and find pictures automatically without getting in your way.</p>
 
