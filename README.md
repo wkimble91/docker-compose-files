@@ -128,6 +128,8 @@
 
 <p>Pi-hole is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.</p>
 
+<br>
+
 ## [unbound](https://github.com/NLnetLabs/unbound)
 
 <p>Unbound is a validating, recursive, caching DNS resolver. It is designed to be fast and lean and incorporates modern features based on open standards.</p>
