@@ -1,0 +1,49 @@
+version: "3"
+
+networks:
+  dns_net:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: 172.31.0.0/16
+
+services:
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    networks:
+      dns_net:
+        ipv4_address: 172.31.0.6
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "443:443/tcp"
+      - "80:80/tcp"
+    environment:
+    - 'TZ=America/Chicago'
+    - 'DNS1=172.31.0.7#5053'
+    - 'DNS2=no'
+    volumes:
+      - './etc-pihole/:/etc/pihole/'
+      - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+  unbound:
+    container_name: unbound
+    image: mvance/unbound:latest
+    networks:
+      dns_net:
+        ipv4_address: 172.31.0.7
+    volumes:
+    - './unbound:/opt/unbound/etc/unbound'
+    ports:
+    - "5053:5053/tcp"
+    - "5053:5053/udp"
+    healthcheck:
+      disable: true
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
