@@ -18,7 +18,7 @@
 ---
 - [photoprism](https://github.com/wkimble91/docker-compose-files/blob/main/compose/photoprism/docker-compose.yaml)
 ---
-- [pihole](https://github.com/wkimble91/docker-compose-files/blob/main/compose/pihole/docker-compose.yaml)
+- [pihole & unbound](https://github.com/wkimble91/docker-compose-files/blob/main/compose/pihole/docker-compose.yaml)
 ---
 - [plex](https://github.com/wkimble91/docker-compose-files/blob/main/compose/plex/docker-compose.yaml)
 ---
