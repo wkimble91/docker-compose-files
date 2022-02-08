@@ -12,6 +12,8 @@
 ---
 - [jackett](https://github.com/wkimble91/docker-compose-files/blob/main/compose/jackett/docker-compose.yaml)
 ---
+- [kuma](https://github.com/wkimble91/docker-compose-files/blob/main/compose/uptime-kuma/docker-compose.yaml)
+---
 - [mealie](https://github.com/wkimble91/docker-compose-files/blob/main/compose/mealie/docker-compose.yaml)
 ---
 - [nextcloud](https://github.com/wkimble91/docker-compose-files/blob/main/compose/nextcloud/docker-compose.yaml)
