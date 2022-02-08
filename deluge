@@ -1,0 +1,22 @@
+---
+version: "2.1"
+services:
+  deluge:
+    image: ghcr.io/linuxserver/deluge
+    container_name: deluge
+    network_mode: host
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+      - DELUGE_LOGLEVEL=error #optional
+    volumes:
+      - ./config:/config
+      - /mnt/synology-nas/Files/Downloads:/downloads
+      - /mnt/synology-nas/Files/Videos/Television:/tv
+      - /mnt/synology-nas/Files/Videos/Movies:/movie
+      - /mnt/synology-nas/Files/Books/Calibre/Seeding:/books
+      - /mnt/synology-nas/Files/Books/Audiobooks:/audiobooks
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
