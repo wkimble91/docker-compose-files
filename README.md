@@ -1,6 +1,6 @@
 <h1> docker-compose-files </h1>
 
-<h2> [audiobookshelf](https://github.com/advplyr/audiobookshelf) </h2>
+<a href="https://github.com/advplyr/audiobookshelf"><h2> [audiobookshelf] </h2></a>
 
 <p>Audiobookshelf is a self-hosted audiobook server for managing and playing your audiobooks.</p>
 
