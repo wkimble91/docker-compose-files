@@ -1,7 +1,8 @@
 # docker-compose-files
 
-## [audiobookshelf](https://github.com/advplyr/audiobookshelf) <p> Audiobookshelf is a self-hosted audiobook server for managing and playing your audiobooks </p>
-- [dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/audiobookshelf/docker-compose.yaml)
+## [audiobookshelf](https://github.com/advplyr/audiobookshelf)<br>
+<p>Audiobookshelf is a self-hosted audiobook server for managing and playing your audiobooks</p><br>
+[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/audiobookshelf/docker-compose.yaml)
 ---
 - [calibre-web](https://github.com/wkimble91/docker-compose-files/blob/main/compose/calibre-web/docker-compose.yaml)
 ---
