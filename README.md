@@ -76,7 +76,7 @@
 
 <br>
 
-<h1><a href="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg"><img src="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg" style="width: 40px; max-width: 100%; height: auto;" title="Kuma" /></a> <a href="https://github.com/louislam/uptime-kuma" uptime-kuma </a></h1>
+<h1><a href="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg"><img src="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg" style="width: 40px; max-width: 100%; height: auto;" title="Kuma" /></a> <a href="https://github.com/louislam/uptime-kuma"> uptime-kuma </a></h1>
 
 <p>A self-hosted monitoring tool for HTTP(s) / TCP / HTTP(s) Keyword / Ping / DNS Record / Push.</p>
 
@@ -88,7 +88,7 @@
 
 <br>
 
-## [mealie](https://github.com/hay-kot/mealie)
+<h1><a href="https://hay-kot.github.io/mealie/assets/img/favicon.png"><img src="https://hay-kot.github.io/mealie/assets/img/favicon.png" style="width: 40px; max-width: 100%; height: auto;" title="Mealie" /></a> <a href="https://github.com/hay-kot/mealie"> mealie </a></h1>
 
 <p>Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the url and Mealie will automatically import the relevant data or add a family recipe with the UI editor. Mealie also provides an API for interactions from 3rd party applications.</p>
 
