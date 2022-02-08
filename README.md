@@ -130,7 +130,7 @@
 
 <br>
 
-<h1><a href="https://unbound.docs.nlnetlabs.nl/en/latest/_static/unbound-duotone-white.svg"><img src="https://unbound.docs.nlnetlabs.nl/en/latest/_static/unbound-duotone-white.svg" style="width: 40px; max-width: 100%; height: auto;" title="Unbound" /></a> <a href="https://github.com/NLnetLabs/unbound"> unbound </a></h1>
+<h1><a href="https://nlnetlabs.nl/static/logos/Unbound/Mark_Unbound_FC_Shaded.svg"><img src="https://nlnetlabs.nl/static/logos/Unbound/Mark_Unbound_FC_Shaded.svg" style="width: 40px; max-width: 100%; height: auto;" title="Unbound" /></a> <a href="https://github.com/NLnetLabs/unbound"> unbound </a></h1>
 
 <p>Unbound is a validating, recursive, caching DNS resolver. It is designed to be fast and lean and incorporates modern features based on open standards.</p>
 
