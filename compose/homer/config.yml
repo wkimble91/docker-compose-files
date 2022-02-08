@@ -1,0 +1,186 @@
+---
+title: "Homer"
+subtitle: "No Bummers"
+logo: "logo.png"
+
+header: false
+footer: false
+
+stylesheet:
+  - "assets/custom.css"
+
+columns: "5"
+theme: default
+colors:
+  light:
+    highlight-primary: "#fff5f2"
+    highlight-secondary: "#fff5f2"
+    highlight-hover: "#bebebe"
+    background: "#12152B"
+    card-background: "#fff5f2"
+    text: "#ffffff"
+    text-header: "#fafafa"
+    text-title: "#000000"
+    text-subtitle: "#111111"
+    card-shadow: rgba(0, 0, 0, 0.5)
+    link: "#3273dc"
+    link-hover: "#2e4053"
+    background-image: "../assets/wallpaper-light.jpeg" # Change wallpaper.jpeg to the name of your own custom wall>
+  dark:
+    highlight-primary: "#181C3A"
+    highlight-secondary: "#181C3A"
+    highlight-hover: "#1F2347"
+    background: "#12152B"
+    card-background: "#181C3A"
+    text: "#eaeaea"
+    text-header: "#7C71DD"
+    text-title: "#fafafa"
+    text-subtitle: "#8B8D9C"
+    card-shadow: rgba(0, 0, 0, 0.5)
+    link: "#c1c1c1"
+    link-hover: "#fafafa"
+    background-image: "../assets/wallpaper.jpeg"
+
+services:
+  - name: "//Media Apps"
+    icon: "fas fa-file"
+    items:
+      - name: "Nextcloud"
+        logo: "assets/tools/nextcloud.png"
+        subtitle: "Document Manager"
+        tag: "documents"
+        tagstyle: "is-primary"
+        url: "{{URL}}"
+        target: "_blank"
+
+      - name: "Photoprism"
+        logo: "assets/tools/photoprism.png"
+        subtitle: "Photo Manager"
+        tag: "photos"
+        tagstyle: "is-primary"
+        url: "{{URL}}"
+        target: "_blank"
+
+      - name: "Audiobookshelf"
+        logo: "assets/tools/headphones.png"
+        subtitle: "Audiobook Manager"
+        tag: "audiobooks"
+        tagstyle: "is-primary"
+        url: "{{URL}}"
+        target: "_blank"
+
+      - name: "Calibre-Web"
+        logo: "assets/tools/calibreweb.png"
+        subtitle: "ePub Manager"
+        tag: "ebooks"
+        tagstyle: "is-primary"
+        url: "{{URL}}"
+        target: "_blank"
+
+  - name: "//Home Apps"
+    icon: "fas fa-home"
+    items:
+      - name: "Mealie"
+        logo: "assets/tools/mealie.png"
+        subtitle: "Recipe Manager"
+        tag: "vegetarian"
+        tagstyle: "is-primary"
+        url: "{{URL}}"
+        target: "_blank"
+
+      - name: "Grocy"
+        logo: "assets/tools/grocy.png"
+        subtitle: "Grocery Manager"
+        tag: "stock"
+        tagstyle: "is-primary"
+        url: "{{URL}}"
+        target: "_blank"
+
+      - name: "Shiori"
+        logo: "assets/tools/shiori.png"
+        subtitle: "Articles Manager"
+        tag: "bookmarks"
+        tagstyle: "is-primary"
+        url: "{{URL}}"
+        target: "_blank"
+
+  - name: "//Downloaders"
+    icon: "fas fa-download"
+    items:
+      - name: "Deluge"
+        logo: "assets/tools/deluge.png"
+        subtitle: "BitTorrent Client"
+        tag: "torrents"
+        tagstyle: "is-info"
+        url: "{{URL}}"
+        target: "_blank"
+
+      - name: "Radarr"
+        logo: "assets/tools/radarr.png"
+        subtitle: "RSS Movie Manager"
+        tag: "movies"
+        tagstyle: "is-info"
+        url: "{{URL}}"
+        target: "_blank"
+
+      - name: "Sonarr"
+        logo: "assets/tools/sonarr.png"
+        subtitle: "RSS TV Show Manager"
+        tag: "tv"
+        tagstyle: "is-info"
+        url: "{{URL}}"
+        target: "_blank"
+
+      - name: "Jackett"
+        logo: "assets/tools/jackett.png"
+        subtitle: "Tracker Manager"
+        tag: "trackers"
+        tagstyle: "is-info"
+        url: "{{URL}}"
+        target: "_blank"
+
+  - name: "//Network"
+    icon: "fas fa-network-wired"
+    items:
+      - name: "PiHole"
+        logo: "assets/tools/pihole.png"
+        subtitle: "DNS Sinkhole"
+        tag: "dns"
+        tagstyle: "is-success"
+        url: "{{URL}}"
+        target: "_blank"
+
+      - name: "Synology"
+        logo: "assets/tools/synology.png"
+        subtitle: "Personal NAS"
+        tag: "nas"
+        tagstyle: "is-success"
+        url: "{{URL}}"
+        target: "_blank"
+
+      - name: "AT&T Router"
+        logo: "assets/tools/router.png"
+        subtitle: "Wireless Router"
+        tag: "router"
+        tagstyle: "is-success"
+        url: "{{URL}}"
+        target: "_blank"
+
+  - name: "//Monitoring"
+    icon: "fas fa-tachometer-alt"
+    items:
+      - name: "Uptime Kuma"
+        logo: "assets/tools/uptime-kuma.png"
+        subtitle: "Downtime Reporter"
+        tag: "uptime"
+        tagstyle: "is-danger"
+        url: "{{URL}}"
+        target: "_blank"
+
+      - name: "Portainer"
+        logo: "assets/tools/portainer.png"
+        subtitle: "Docker Manager"
+        tag: "docker"
+        tagstyle: "is-danger"
+        url: "{{URL}}"
+        target: "_blank"
