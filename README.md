@@ -8,7 +8,7 @@
 
 ---
 
-## [calibre-web](https://github.com/janeczku/calibre-web)
+<h1><a href="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png"><img src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" style="width: 40px; max-width: 100%; height: auto;" title="Watchtower" /></a> <a href="https://github.com/janeczku/calibre-web" calibre-web </a></h1>
 
 <p>Calibre-Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database.</p>
 
