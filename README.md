@@ -166,7 +166,7 @@
 
 <br>
 
-## [radarr](https://github.com/Radarr/Radarr)
+<h1><a href="https://avatars.githubusercontent.com/u/25025331"><img src="https://avatars.githubusercontent.com/u/25025331" style="width: 40px; max-width: 100%; height: auto;" title="Radarr" /></a> <a href="https://github.com/Radarr/Radarr"> radarr </a></h1>
 
 <p>Radarr is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available. Note that only one type of a given movie is supported.</p>
 
@@ -178,7 +178,7 @@
 
 <br>
 
-## [shiori](https://github.com/go-shiori/shiori)
+<h1><a href="https://avatars.githubusercontent.com/u/41993376"><img src="https://avatars.githubusercontent.com/u/41993376" style="width: 40px; max-width: 100%; height: auto;" title="Shiori" /></a> <a href="https://github.com/go-shiori/shiori"> shiori </a></h1>
 
 <p>Shiori is a simple bookmarks manager written in the Go language. Intended as a simple clone of Pocket. You can use it as a command line application or as a web application. This application is distributed as a single binary, which means it can be installed and used easily.</p>
 
@@ -190,7 +190,7 @@
 
 <br>
 
-## [sonarr](https://github.com/Sonarr/Sonarr)
+<h1><a href="https://avatars.githubusercontent.com/u/1082903"><img src="https://avatars.githubusercontent.com/u/1082903" style="width: 40px; max-width: 100%; height: auto;" title="Sonarr" /></a> <a href="https://github.com/Sonarr/Sonarr"> sonarr </a></h1>
 
 <p>Sonarr is a TV collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available. Note that only one type of a given movie is supported.</p>
 
