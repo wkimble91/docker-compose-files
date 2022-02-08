@@ -134,7 +134,7 @@
 
 ---
 
-<h1><a href="https://raw.githubusercontent.com/containrrr/watchtower/main/logo.png"><img src="https://raw.githubusercontent.com/containrrr/watchtower/main/logo.png" style="width: 40px; max-width: 100%; height: auto; y: 10" title="Watchtower" /></a> <a href="https://github.com/containrrr/watchtower"> watchtower</a></h1>
+<h1><a href="https://raw.githubusercontent.com/containrrr/watchtower/main/logo.png"><img src="https://raw.githubusercontent.com/containrrr/watchtower/main/logo.png" style="width: 40px; max-width: 100%; height: auto; position:relative; top offset:10px" title="Watchtower" /></a> <a href="https://github.com/containrrr/watchtower"> watchtower</a></h1>
 
 <p>With watchtower you can update the running version of your containerized app simply by pushing a new image to the Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your existing container and restart it with the same options that were used when it was deployed initially.</p>
 
