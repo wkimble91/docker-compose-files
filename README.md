@@ -2,4 +2,4 @@
 
 A simple backup of my current docker files
 ---
-- [audiobookshelf](./audiobookshelf.md)
+- [audiobookshelf](https://github.com/wkimble91/docker-compose-files/blob/main/audiobookshelf)
