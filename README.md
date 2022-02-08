@@ -1,6 +1,6 @@
 # docker-compose-files
 
-- [audiobookshelf](https://github.com/wkimble91/docker-compose-files/blob/main/compose/audiobookshelf/docker-compose.yaml) 
+[audiobookshelf](https://github.com/wkimble91/docker-compose-files/blob/main/compose/audiobookshelf/docker-compose.yaml) 
 
 [dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/audiobookshelf/docker-compose.yaml)
 ---
