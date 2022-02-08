@@ -124,7 +124,7 @@
 
 <br>
 
-## [pihole](https://github.com/pi-hole/pi-hole)
+<h1><a href="https://i.pinimg.com/originals/4d/a0/cc/4da0cc5c02df7ab1f8188ba01444dc8e.png"><img src="https://i.pinimg.com/originals/4d/a0/cc/4da0cc5c02df7ab1f8188ba01444dc8e.png" style="width: 40px; max-width: 100%; height: auto;" title="Pihole" /></a> <a href="https://github.com/pi-hole/pi-hole"> pihole </a></h1>
 
 <p>Pi-hole is a DNS sinkhole that protects your devices from unwanted content without installing any client-side software.</p>
 
