@@ -1,6 +1,6 @@
 # docker-compose-files
 
-- [audiobookshelf](https://github.com/wkimble91/docker-compose-files/blob/main/compose/audiobookshelf/docker-compose)
+- [audiobookshelf](https://github.com/wkimble91/docker-compose-files/blob/main/compose/audiobookshelf/docker-compose.yaml)
 ---
 - [calibre-web](https://github.com/wkimble91/docker-compose-files/blob/main/compose/calibre-web/docker-compose)
 ---
