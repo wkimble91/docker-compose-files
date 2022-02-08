@@ -64,7 +64,7 @@
 
 <br>
 
-## [jackett](https://github.com/Jackett/Jackett)
+<h1><a href="https://developer.asustor.com/uploadIcons/0020_23588_1445715271_icon.png"><img src="https://developer.asustor.com/uploadIcons/0020_23588_1445715271_icon.png" style="width: 40px; max-width: 100%; height: auto;" title="Jackett" /></a> <a href="https://github.com/Jackett/Jackett"> jackett </a></h1>
 
 <p>Jackett works as a proxy server: it translates queries from apps into tracker-site-specific http queries, parses the html or json response, and then sends results back to the requesting software.</p>
 
@@ -76,7 +76,7 @@
 
 <br>
 
-## [uptime-kuma](https://github.com/louislam/uptime-kuma)
+<h1><a href="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg"><img src="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg" style="width: 40px; max-width: 100%; height: auto;" title="Kuma" /></a> <a href="https://github.com/louislam/uptime-kuma" uptime-kuma </a></h1>
 
 <p>A self-hosted monitoring tool for HTTP(s) / TCP / HTTP(s) Keyword / Ping / DNS Record / Push.</p>
 
