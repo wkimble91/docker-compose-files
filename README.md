@@ -1,6 +1,6 @@
 <h1> docker-compose-files </h1>
 
-<h1><a href="https://www.audiobookshelf.org/Logo.png"><img src="https://www.audiobookshelf.org/Logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Watchtower" /></a> <a href="https://github.com/advplyr/audiobookshelf"><h1> audiobookshelf </h1></a>
+<h1><a href="https://www.audiobookshelf.org/Logo.png"><img src="https://www.audiobookshelf.org/Logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Watchtower" /></a> <a href="https://github.com/advplyr/audiobookshelf"> audiobookshelf </a></h1>
 
 <p>Audiobookshelf is a self-hosted audiobook server for managing and playing your audiobooks.</p>
 
