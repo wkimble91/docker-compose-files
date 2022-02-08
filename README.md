@@ -37,7 +37,7 @@
 <p>A dead simple static HOMepage for your servER to keep your services on hand, from a simple yaml configuration file.</p>
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/homer/docker-compose.yaml)**
-
+**[configfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/homer/config.yaml)**
 ---
 
 ## [jackett](https://github.com/Jackett/Jackett)
