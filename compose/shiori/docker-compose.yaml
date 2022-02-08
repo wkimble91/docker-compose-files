@@ -1,0 +1,17 @@
+---
+version: "2"
+services:
+  shiori:
+    image: radhifadlillah/shiori
+    container_name: shiori
+    volumes:
+      - ./data:/data
+    ports:
+      - 8088:8080
+    environment:
+      - UID=1000
+      - GID=1000
+      - SHIORI_DIR=/data
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
