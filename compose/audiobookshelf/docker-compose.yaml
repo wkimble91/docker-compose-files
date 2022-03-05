@@ -13,7 +13,7 @@ services:
       - ./config:/config
       - /mnt/synology-nas/Files/Books/Audiobooks:/audiobooks
     ports:
-      - 1337:80
+      - x:80
     restart: unless-stopped
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
