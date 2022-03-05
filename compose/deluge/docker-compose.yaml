@@ -12,11 +12,11 @@ services:
       - DELUGE_LOGLEVEL=error #optional
     volumes:
       - ./config:/config
-      - /mnt/synology-nas/Files/Downloads:/downloads
-      - /mnt/synology-nas/Files/Videos/Television:/tv
-      - /mnt/synology-nas/Files/Videos/Movies:/movie
-      - /mnt/synology-nas/Files/Books/Calibre/Seeding:/books
-      - /mnt/synology-nas/Files/Books/Audiobooks:/audiobooks
+      - /mnt/x:/downloads
+      - /mnt/x:/tv
+      - /mnt/x:/movie
+      - /mnt/x:/books
+      - /mnt/x:/audiobooks
     restart: unless-stopped
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
