@@ -152,4 +152,4 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/wger/docker-compose.yaml)**
 <br>
-**[env](https://github.com/wkimble91/docker-compose-files/blob/main/compose/wger/prod.env)**
+**[envfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/wger/prod.env)**
