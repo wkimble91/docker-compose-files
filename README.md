@@ -9,8 +9,6 @@
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/audiobookshelf/docker-compose.yaml)**
 
 <br>
----
-<br>
 
 <h1><a href="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png"><img src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" style="width: 40px; max-width: 100%; height: auto;" title="Calibre" /></a> <a href="https://github.com/janeczku/calibre-web"> calibre-web </a></h1>
 
