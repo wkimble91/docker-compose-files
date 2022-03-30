@@ -1,1 +1,57 @@
-a
+version: '3.7'
+
+services:
+  web:
+    image: wger/server:latest
+    container_name: wger_app
+    volumes:
+      - static:/home/wger/static
+      - media:/home/wger/media
+    ports:
+      - {PORT}
+    env_file:
+      - ./prod.env
+    depends_on:
+      - db
+      - cache
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  nginx:
+    build: ./nginx
+    container_name: wger_nginx
+    volumes:
+      - static:/wger/static:ro
+      - media:/wger/media:ro
+    ports:
+      - {PORT}
+    depends_on:
+      - web
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  db:
+    image: postgres:12-alpine
+    container_name: wger_db
+    volumes:
+      - postgres-data:/var/lib/postgresql/data/
+    expose:
+      - {PORT}
+    environment:
+      - POSTGRES_USER={USER}
+      - POSTGRES_PASSWORD={PASSWORD}
+      - POSTGRES_DB={DB}
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  cache:
+    restart: always
+    container_name: wger_cache
+    image: redis:latest
+    expose:
+      - {PORT}
+
+volumes:
+  postgres-data:
+  static:
+  media:
