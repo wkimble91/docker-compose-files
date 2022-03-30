@@ -215,7 +215,7 @@
 
 <br>
 
-<h1><a href="https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png"><img src="https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Wger" /></a> <a href="https://github.com/wger-project/wger"> Wger </a></h1>
+<h1><a href="https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png"><img src="https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png" style="width: 40px; max-width: 100%; height: auto;" title="wger" /></a> <a href="https://github.com/wger-project/wger"> wger </a></h1>
 
 <p>Wger (ˈvɛɡɐ) Workout Manager is a free, open source web application that helps you manage your personal workouts, weight and diet plans and can also be used as a simple gym management utility. It offers a REST API as well, for easy integration with other projects and tools.</p>
 
