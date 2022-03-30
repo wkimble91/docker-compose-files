@@ -17,8 +17,6 @@
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/calibre-web/docker-compose.yaml)**
 
 <br>
----
-<br>
 
 <h1><a href="https://deluge-torrent.org/images/deluge_logo.png"><img src="https://deluge-torrent.org/images/deluge_logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Deluge" /></a> <a href="https://github.com/deluge-torrent/deluge"> deluge </a></h1>
 
@@ -27,8 +25,6 @@
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/deluge/docker-compose.yaml)**
 
 <br>
----
-<br>
 
 <h1><a href="https://external-preview.redd.it/pR8s5nJY2mwOHaj2DGAqfyrfQp9jNHKibrllvhDmk-o.jpg?auto=webp&s=e15f3ab0ea8d7835e03bc093ff8fb7ab20984c74"><img src="https://external-preview.redd.it/pR8s5nJY2mwOHaj2DGAqfyrfQp9jNHKibrllvhDmk-o.jpg?auto=webp&s=e15f3ab0ea8d7835e03bc093ff8fb7ab20984c74" style="width: 40px; max-width: 100%; height: auto;" title="Grocy" /></a> <a href="https://github.com/grocy/grocy"> grocy </a></h1>
 
@@ -36,8 +32,6 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/grocy/docker-compose.yaml)**
 
-<br>
----
 <br>
 
 <h1><a href="https://raw.githubusercontent.com/bastienwirtz/homer/main/public/logo.png"><img src="https://raw.githubusercontent.com/bastienwirtz/homer/main/public/logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Homer" /></a> <a href="https://github.com/bastienwirtz/homer"> homer </a></h1>
@@ -49,8 +43,6 @@
 **[configfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/homer/config.yaml)**
 
 <br>
----
-<br>
 
 <h1><a href="https://developer.asustor.com/uploadIcons/0020_23588_1445715271_icon.png"><img src="https://developer.asustor.com/uploadIcons/0020_23588_1445715271_icon.png" style="width: 40px; max-width: 100%; height: auto;" title="Jackett" /></a> <a href="https://github.com/Jackett/Jackett"> jackett </a></h1>
 
@@ -58,8 +50,6 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/jackett/docker-compose.yaml)**
 
-<br>
----
 <br>
 
 <h1><a href="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg"><img src="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg" style="width: 40px; max-width: 100%; height: auto;" title="Kuma" /></a> <a href="https://github.com/louislam/uptime-kuma"> uptime-kuma </a></h1>
@@ -69,8 +59,6 @@
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/uptime-kuma/docker-compose.yaml)**
 
 <br>
----
-<br>
 
 <h1><a href="https://hay-kot.github.io/mealie/assets/img/favicon.png"><img src="https://hay-kot.github.io/mealie/assets/img/favicon.png" style="width: 40px; max-width: 100%; height: auto;" title="Mealie" /></a> <a href="https://github.com/hay-kot/mealie"> mealie </a></h1>
 
@@ -78,8 +66,6 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/mealie/docker-compose.yaml)**
 
-<br>
----
 <br>
 
 <h1><a href="https://avatars.githubusercontent.com/u/19211038"><img src="https://avatars.githubusercontent.com/u/19211038" style="width: 40px; max-width: 100%; height: auto;" title="Nextcloud" /></a> <a href="https://github.com/nextcloud/server"> nextcloud </a></h1>
@@ -89,8 +75,6 @@
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/nextcloud/docker-compose.yaml)**
 
 <br>
----
-<br>
 
 <h1><a href="https://photoprism.app/static/icons/logo.svg"><img src="https://photoprism.app/static/icons/logo.svg" style="width: 40px; max-width: 100%; height: auto;" title="Photoprism" /></a> <a href="https://github.com/photoprism/photoprism"> photoprism </a></h1>
 
@@ -98,8 +82,6 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/photoprism/docker-compose.yaml)**
 
-<br>
----
 <br>
 
 <h1><a href="https://i.pinimg.com/originals/4d/a0/cc/4da0cc5c02df7ab1f8188ba01444dc8e.png"><img src="https://i.pinimg.com/originals/4d/a0/cc/4da0cc5c02df7ab1f8188ba01444dc8e.png" style="width: 40px; max-width: 100%; height: auto;" title="Pihole" /></a> <a href="https://github.com/pi-hole/pi-hole"> pihole </a></h1>
@@ -115,8 +97,6 @@
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/pihole/docker-compose.yaml)**
 
 <br>
----
-<br>
 
 <h1><a href="https://avatars.githubusercontent.com/u/324832"><img src="https://avatars.githubusercontent.com/u/324832" style="width: 40px; max-width: 100%; height: auto;" title="Plex" /></a> <a href="https://github.com/plexinc/pms-docker"> plex </a></h1>
 
@@ -124,8 +104,6 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/plex/docker-compose.yaml)**
 
-<br>
----
 <br>
 
 <h1><a href="https://avatars.githubusercontent.com/u/22225832"><img src="https://avatars.githubusercontent.com/u/22225832" style="width: 40px; max-width: 100%; height: auto;" title="Portainer" /></a> <a href="https://github.com/portainer/portainer"> portainer </a></h1>
@@ -135,8 +113,6 @@
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/portainer/docker-compose.yaml)**
 
 <br>
----
-<br>
 
 <h1><a href="https://avatars.githubusercontent.com/u/25025331"><img src="https://avatars.githubusercontent.com/u/25025331" style="width: 40px; max-width: 100%; height: auto;" title="Radarr" /></a> <a href="https://github.com/Radarr/Radarr"> radarr </a></h1>
 
@@ -144,8 +120,6 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/radarr/docker-compose.yaml)**
 
-<br>
----
 <br>
 
 <h1><a href="https://avatars.githubusercontent.com/u/41993376"><img src="https://avatars.githubusercontent.com/u/41993376" style="width: 40px; max-width: 100%; height: auto;" title="Shiori" /></a> <a href="https://github.com/go-shiori/shiori"> shiori </a></h1>
@@ -155,8 +129,6 @@
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/shiori/docker-compose.yaml)**
 
 <br>
----
-<br>
 
 <h1><a href="https://avatars.githubusercontent.com/u/1082903"><img src="https://avatars.githubusercontent.com/u/1082903" style="width: 40px; max-width: 100%; height: auto;" title="Sonarr" /></a> <a href="https://github.com/Sonarr/Sonarr"> sonarr </a></h1>
 
@@ -165,8 +137,6 @@
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/sonarr/docker-compose.yaml)**
 
 <br>
----
-<br>
 
 <h1><a href="https://raw.githubusercontent.com/containrrr/watchtower/main/logo.png"><img src="https://raw.githubusercontent.com/containrrr/watchtower/main/logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Watchtower" /></a> <a href="https://github.com/containrrr/watchtower"> watchtower </a></h1>
 
@@ -174,8 +144,6 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/watchtower/docker-compose.yaml)**
 
-<br>
----
 <br>
 
 <h1><a href="https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png"><img src="https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png" style="width: 40px; max-width: 100%; height: auto;" title="wger" /></a> <a href="https://github.com/wger-project/wger"> wger </a></h1>
