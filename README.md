@@ -207,3 +207,16 @@
 <p>With watchtower you can update the running version of your containerized app simply by pushing a new image to the Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your existing container and restart it with the same options that were used when it was deployed initially.</p>
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/watchtower/docker-compose.yaml)**
+
+
+<br>
+
+---
+
+<br>
+
+<h1><a href="https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png"><img src="https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Wger" /></a> <a href="https://github.com/wger-project/wger"> Wger </a></h1>
+
+<p>Wger (ˈvɛɡɐ) Workout Manager is a free, open source web application that helps you manage your personal workouts, weight and diet plans and can also be used as a simple gym management utility. It offers a REST API as well, for easy integration with other projects and tools.</p>
+
+**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/wger/docker-compose.yaml)**
