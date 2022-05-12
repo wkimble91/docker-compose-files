@@ -23,6 +23,7 @@
 <p>Cartridge is a self-hosted game library made with Laravel + Vue.js.</p>
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/cartridge/docker-compose.yaml)**
+
 <br>
 
 <h1><a href="https://deluge-torrent.org/images/deluge_logo.png"><img src="https://deluge-torrent.org/images/deluge_logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Deluge" /></a> <a href="https://github.com/deluge-torrent/deluge"> deluge </a></h1>
