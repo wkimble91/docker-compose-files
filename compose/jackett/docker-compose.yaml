@@ -11,7 +11,7 @@ services:
       - AUTO_UPDATE=true
     volumes:
       - ./config:/config
-      - /mnt/synology-nas/Files/Downloads:/downloads
+      - /mnt/x:/downloads
     ports:
       - x:9117
     restart: unless-stopped
