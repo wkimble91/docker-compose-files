@@ -11,7 +11,7 @@ services:
       - PASSWORD= #optional
       - CLI_ARGS= #optional
     volumes:
-      - /mnt/synology-nas/Files/Books/Calibre:/config
+      - /mnt/x:/config
     ports:
       - x:8080
       - x:8081
@@ -28,7 +28,7 @@ services:
       - DOCKER_MODS=linuxserver/calibre-web:calibre
     volumes:
       - ./config:/config
-      - /mnt/synology-nas/Files/Books/Calibre/Calibre Library:/books
+      - /mnt/x:/books
     ports:
       - x:8083
     restart: unless-stopped
