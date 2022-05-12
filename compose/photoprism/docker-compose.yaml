@@ -11,10 +11,10 @@ services:
       - seccomp:unconfined
       - apparmor:unconfined
     ports:
-      - "2342:2342" # HTTP port (host:container)
+      - "x:2342" # HTTP port (host:container)
     environment:
       PHOTOPRISM_ADMIN_PASSWORD: "{{ADMIN_PASSWORD}}" # PLEASE CHANGE: Your initial admin password (min 4 character>
-      PHOTOPRISM_SITE_URL: "http://localhost:2342/"  # Public server URL incl http:// or https:// and /path, :port>
+      PHOTOPRISM_SITE_URL: "http://localhost:{{PORT}}/"  # Public server URL incl http:// or https:// and /path, :port>
       PHOTOPRISM_ORIGINALS_LIMIT: 5000               # File size limit for originals in MB (increase for high-res >
       PHOTOPRISM_HTTP_COMPRESSION: "gzip"            # Improves transfer speed and bandwidth utilization (none or >
       PHOTOPRISM_DEBUG: "false"                      # Run in debug mode (shows additional log messages)
