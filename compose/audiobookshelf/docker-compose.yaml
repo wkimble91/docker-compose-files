@@ -11,7 +11,7 @@ services:
     volumes:
       - ./metadata:/metadata
       - ./config:/config
-      - /mnt/synology-nas/Files/Books/Audiobooks:/audiobooks
+      - /mnt/x:/audiobooks
     ports:
       - x:80
     restart: unless-stopped
