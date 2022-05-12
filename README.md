@@ -106,14 +106,6 @@
 
 <br>
 
-<h2><a href="https://avatars.githubusercontent.com/u/324832"><img src="https://avatars.githubusercontent.com/u/324832" style="width: 40px; max-width: 100%; height: auto;" title="Plex" /></a> <a href="https://github.com/plexinc/pms-docker"> plex </a></h2>
-
-<p>Plex Media Server is a digital media player and organizational tool that allows you to access the music, pictures, and videos stored on one server with any other computer or compatible mobile device.</p>
-
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/plex/docker-compose.yaml)**
-
-<br>
-
 <h2><a href="https://avatars.githubusercontent.com/u/22225832"><img src="https://avatars.githubusercontent.com/u/22225832" style="width: 40px; max-width: 100%; height: auto;" title="Portainer" /></a> <a href="https://github.com/portainer/portainer"> portainer </a></h2>
 
 <p>Portainer Community Edition is a lightweight service delivery platform for containerized applications that can be used to manage Docker, Swarm, Kubernetes and ACI environments. It is designed to be as simple to deploy as it is to use. The application allows you to manage all your orchestrator resources (containers, images, volumes, networks and more) through a ‘smart’ GUI and/or an extensive API.</p>
