@@ -2,7 +2,7 @@
 
 <br>
 
-<h2><a href="https://www.audiobookshelf.org/Logo.png"><img src="https://www.audiobookshelf.org/Logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Audiobookshelf" /></a> <a href="https://github.com/advplyr/audiobookshelf"> audiobookshelf </a></h2>
+<h2><a href="https://www.audiobookshelf.org/Logo.png"><img src="https://www.audiobookshelf.org/Logo.png" style="width: 30px; max-width: 100%; height: auto;" title="Audiobookshelf" /></a> <a href="https://github.com/advplyr/audiobookshelf"> audiobookshelf </a></h2>
 
 <p>Audiobookshelf is a self-hosted audiobook server for managing and playing your audiobooks.</p>
 
