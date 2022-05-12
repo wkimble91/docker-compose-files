@@ -11,10 +11,10 @@ services:
     volumes:
       - ./data:/data
       - ./config:/config
-      - /mnt/synology-nas/Files/Videos/Television:/tv #optional
-      - /mnt/synology-nas/Files/Downloads:/downloads #optional
+      - x:/tv #optional
+      - x:/downloads #optional
     ports:
-      - 8989:8989
+      - x:8989
     restart: unless-stopped
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
