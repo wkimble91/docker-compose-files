@@ -26,6 +26,7 @@ colors:
     link: "#3273dc"
     link-hover: "#2e4053"
     background-image: "../assets/wallpaper-light.jpeg"
+    
   dark:
     highlight-primary: "#181C3A"
     highlight-secondary: "#181C3A"
@@ -45,10 +46,11 @@ services:
   - name: "//Media Apps"
     icon: "fas fa-file"
     items:
-      - name: "Nextcloud"
-        logo: "assets/tools/nextcloud.png"
-        subtitle: "Document Manager"
-        tag: "documents"
+
+      - name: "Jellyfin"
+        logo: "assets/tools/jellyfin.png"
+        subtitle: "Media Manager"
+        tag: "media"
         tagstyle: "is-primary"
         url: "{{URL}}"
         target: "_blank"
@@ -77,9 +79,26 @@ services:
         url: "{{URL}}"
         target: "_blank"
 
+      - name: "Cartridge"
+        logo: "assets/tools/cartridge.png"
+        subtitle: "ROM Manager"
+        tag: "games"
+        tagstyle: "is-primary"
+        url: "{{URL}}"
+        target: "_blank"
+
   - name: "//Home Apps"
     icon: "fas fa-home"
     items:
+    
+          - name: "Nextcloud"
+        logo: "assets/tools/nextcloud.png"
+        subtitle: "Document Manager"
+        tag: "documents"
+        tagstyle: "is-primary"
+        url: "{{URL}}"
+        target: "_blank"
+        
       - name: "Mealie"
         logo: "assets/tools/mealie.png"
         subtitle: "Recipe Manager"
@@ -103,10 +122,19 @@ services:
         tagstyle: "is-primary"
         url: "{{URL}}"
         target: "_blank"
+        
+      - name: "Wger"
+        logo: "assets/tools/wger.png"
+        subtitle: "Exercise Manager"
+        tag: "health"
+        tagstyle: "is-primary"
+        url: "{{URL}}"
+        target: "_blank"
 
   - name: "//Downloaders"
     icon: "fas fa-download"
     items:
+    
       - name: "Deluge"
         logo: "assets/tools/deluge.png"
         subtitle: "BitTorrent Client"
@@ -142,6 +170,7 @@ services:
   - name: "//Network"
     icon: "fas fa-network-wired"
     items:
+    
       - name: "PiHole"
         logo: "assets/tools/pihole.png"
         subtitle: "DNS Sinkhole"
@@ -169,6 +198,7 @@ services:
   - name: "//Monitoring"
     icon: "fas fa-tachometer-alt"
     items:
+    
       - name: "Uptime Kuma"
         logo: "assets/tools/uptime-kuma.png"
         subtitle: "Downtime Reporter"
