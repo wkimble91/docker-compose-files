@@ -161,3 +161,11 @@
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/wger/docker-compose.yaml)**
 <br>
 **[envfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/wger/prod.env)**
+
+<br>
+
+<h1><a href="https://cdn.icon-icons.com/icons2/2699/PNG/512/wireguard_logo_icon_168760.png"><img src="https://cdn.icon-icons.com/icons2/2699/PNG/512/wireguard_logo_icon_168760.png" style="width: 40px; max-width: 100%; height: auto;" title="wireguard" /></a> <a href="https://github.com/linuxserver/docker-wireguard"> wger </a></h1>
+
+<p>WireGuard® is an extremely simple yet fast and modern VPN that utilizes state-of-the-art cryptography. It aims to be faster, simpler, leaner, and more useful than IPsec, while avoiding the massive headache. It intends to be considerably more performant than OpenVPN. WireGuard is designed as a general purpose VPN for running on embedded interfaces and super computers alike, fit for many different circumstances. Initially released for the Linux kernel, it is now cross-platform (Windows, macOS, BSD, iOS, Android) and widely deployable. It is currently under heavy development, but already it might be regarded as the most secure, easiest to use, and simplest VPN solution in the industry.</p>
+
+**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/wireguard/docker-compose.yaml)**
