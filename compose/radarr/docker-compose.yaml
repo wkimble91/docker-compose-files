@@ -10,10 +10,10 @@ services:
       - TZ=America/Chicago
     volumes:
       - ./config:/config
-      - /mnt/synology-nas/Files/Videos/Movies:/movies #optional
-      - /mnt/synology-nas/Files/Downloads:/downloads #optional
+      - x:/movies #optional
+      - x:/downloads #optional
     ports:
-      - 7878:7878
+      - x:7878
     restart: unless-stopped
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
