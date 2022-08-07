@@ -52,14 +52,6 @@
 
 <br>
 
-<h2><a href="https://developer.asustor.com/uploadIcons/0020_23588_1445715271_icon.png"><img src="https://developer.asustor.com/uploadIcons/0020_23588_1445715271_icon.png" style="width: 40px; max-width: 100%; height: auto;" title="Jackett" /></a> <a href="https://github.com/Jackett/Jackett"> jackett </a></h2>
-
-<p>Jackett works as a proxy server: it translates queries from apps into tracker-site-specific http queries, parses the html or json response, and then sends results back to the requesting software.</p>
-
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/jackett/docker-compose.yaml)**
-
-<br>
-
 <h2><a href="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg"><img src="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg" style="width: 40px; max-width: 100%; height: auto;" title="Kuma" /></a> <a href="https://github.com/louislam/uptime-kuma"> uptime-kuma </a></h2>
 
 <p>A self-hosted monitoring tool for HTTP(s) / TCP / HTTP(s) Keyword / Ping / DNS Record / Push.</p>
@@ -114,27 +106,11 @@
 
 <br>
 
-<h2><a href="https://avatars.githubusercontent.com/u/25025331"><img src="https://avatars.githubusercontent.com/u/25025331" style="width: 40px; max-width: 100%; height: auto;" title="Radarr" /></a> <a href="https://github.com/Radarr/Radarr"> radarr </a></h2>
-
-<p>Radarr is a movie collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available. Note that only one type of a given movie is supported.</p>
-
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/radarr/docker-compose.yaml)**
-
-<br>
-
 <h2><a href="https://avatars.githubusercontent.com/u/41993376"><img src="https://avatars.githubusercontent.com/u/41993376" style="width: 40px; max-width: 100%; height: auto;" title="Shiori" /></a> <a href="https://github.com/go-shiori/shiori"> shiori </a></h2>
 
 <p>Shiori is a simple bookmarks manager written in the Go language. Intended as a simple clone of Pocket. You can use it as a command line application or as a web application. This application is distributed as a single binary, which means it can be installed and used easily.</p>
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/shiori/docker-compose.yaml)**
-
-<br>
-
-<h2><a href="https://avatars.githubusercontent.com/u/1082903"><img src="https://avatars.githubusercontent.com/u/1082903" style="width: 40px; max-width: 100%; height: auto;" title="Sonarr" /></a> <a href="https://github.com/Sonarr/Sonarr"> sonarr </a></h2>
-
-<p>Sonarr is a TV collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new movies and will interface with clients and indexers to grab, sort, and rename them. It can also be configured to automatically upgrade the quality of existing files in the library when a better quality format becomes available. Note that only one type of a given movie is supported.</p>
-
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/sonarr/docker-compose.yaml)**
 
 <br>
 
