@@ -1,4 +1,4 @@
-<h1> docker-compose-files </h1>
+<h1>Docker Compose Files</h1>
 
 <br>
 
