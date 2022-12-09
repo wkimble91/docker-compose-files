@@ -1,0 +1,47 @@
+version: "3"
+services:
+  db_recipes:
+    container_name: tandoor_db
+    restart: unless-stopped
+    image: postgres:11-alpine
+    volumes:
+      - ./postgresql:/var/lib/postgresql/data
+    env_file:
+      - ./.env
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  web_recipes:
+    container_name: tandoor_app
+    restart: unless-stopped
+    image: vabene1111/recipes
+    env_file:
+      - ./.env
+    volumes:
+      - ./staticfiles:/opt/recipes/staticfiles
+      - nginx_config:/opt/recipes/nginx/conf.d
+      - ./mediafiles:/opt/recipes/mediafiles
+    depends_on:
+      - db_recipes
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+  nginx_recipes:
+    container_name: tandoor_nginx
+    image: nginx:mainline-alpine
+    restart: unless-stopped
+    ports:
+      - {{PORT}}:80
+    env_file:
+      - ./.env
+    depends_on:
+      - web_recipes
+    volumes:
+      - nginx_config:/etc/nginx/conf.d:ro
+      - ./staticfiles:/static:ro
+      - ./mediafiles:/media:ro
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+
+volumes:
+  nginx_config:
