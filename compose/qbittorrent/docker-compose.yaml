@@ -1,0 +1,25 @@
+---
+version: "2.1"
+services:
+  qbittorrent:
+    image: lscr.io/linuxserver/qbittorrent:4.4.5-r3-ls228
+    container_name: qbittorrent
+    network_mode: host
+    ports:
+      - {{PORT}}:8086
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+      - WEBUI_PORT=8086
+    volumes:
+      - ./config:/config
+      - /Downloads:/downloads
+      - /Television:/tv
+      - /Movies:/movie
+      - /Masterclass:/masterclass
+      - /eBooks:/ebooks
+      - /Audiobooks:/audiobooks
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
