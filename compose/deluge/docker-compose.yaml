@@ -1,22 +1,45 @@
 ---
-version: "2.1"
+version: "3.4"
 services:
+  vpn:
+    container_name: protonvpn
+    image: qmcgaw/gluetun:v3.29
+    cap_add:
+      - net_admin
+    restart: unless-stopped
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    volumes:
+      - /dev/net:/dev/net:z
+    security_opt:
+      - label:disable
+    ports:
+      - {{PORT}}:8112
+    environment:
+      - VPN_SERVICE_PROVIDER=protonvpn
+      - OPENVPN_USER={{USER}}
+      - OPENVPN_PASSWORD={{PASSWORD}}
+      - SERVER_COUNTRIES=United States
+      - FIREWALL_VPN_INPUT_PORTS={{PORT}}
+
   deluge:
-    image: ghcr.io/linuxserver/deluge
     container_name: deluge
-    network_mode: host
+    image: linuxserver/deluge:amd64-2.0.5-r1-ls162
+    restart: unless-stopped
+    network_mode: "service:vpn"
+    depends_on:
+      - vpn
     environment:
       - PUID=1000
       - PGID=1000
       - TZ=America/Chicago
-      - DELUGE_LOGLEVEL=error #optional
+      - DOCKER_MODS=ghcr.io/gilbn/theme.park:deluge
     volumes:
       - ./config:/config
-      - /mnt/x:/downloads
-      - /mnt/x:/tv
-      - /mnt/x:/movie
-      - /mnt/x:/books
-      - /mnt/x:/audiobooks
-    restart: unless-stopped
-    labels:
-      - "com.centurylinklabs.watchtower.enable=true"
+      - /Downloads:/downloads
+      - /Television:/tv
+      - /Movies:/movie
+      - /Masterclass:/masterclass
+      - /Calibre/Seeding:/books
+      - /Audiobooks:/audiobooks
+
