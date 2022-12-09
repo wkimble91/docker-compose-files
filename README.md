@@ -10,19 +10,11 @@
 
 <br>
 
-<h2><a href="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png"><img src="https://raw.githubusercontent.com/kovidgoyal/calibre/master/resources/images/lt.png" style="width: 40px; max-width: 100%; height: auto;" title="Calibre" /></a> <a href="https://github.com/janeczku/calibre-web"> calibre-web </a></h2>
+<h2><a href="https://getdashdot.com/img/logo512.png"><img src="https://getdashdot.com/img/logo512.png" style="width: 40px; max-width: 100%; height: auto;" title="Dash." /></a> <a href="https://github.com/MauriceNino/dashdot"> dash. </a></h2>
 
-<p>Calibre-Web is a web app providing a clean interface for browsing, reading and downloading eBooks using an existing Calibre database. Includes Calibre in file.</p>
+<p>dash. (or dashdot) is a modern server dashboard, running on the latest tech, designed with glassmorphism in mind. It is intended to be used for smaller VPS and private servers. </p>
 
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/calibre-web/docker-compose.yaml)**
-
-<br>
-
-<h2><a href="https://pngimg.com/uploads/pacman/pacman_PNG94.png"><img src="https://pngimg.com/uploads/pacman/pacman_PNG94.png" style="width: 40px; max-width: 100%; height: auto;" title="Cartridge" /></a> <a href="https://github.com/unclebacon-live/cartridge"> cartridge </a></h2>
-
-<p>Cartridge is a self-hosted game library made with Laravel + Vue.js.</p>
-
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/cartridge/docker-compose.yaml)**
+**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/dash/docker-compose.yaml)**
 
 <br>
 
@@ -31,14 +23,6 @@
 <p>Deluge is a BitTorrent client that utilizes a daemon/client model. It has various user interfaces available such as the GTK-UI, Web-UI and Console-UI. It uses libtorrent at its core to handle the BitTorrent protocol.</p>
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/deluge/docker-compose.yaml)**
-
-<br>
-
-<h2><a href="https://external-preview.redd.it/pR8s5nJY2mwOHaj2DGAqfyrfQp9jNHKibrllvhDmk-o.jpg?auto=webp&s=e15f3ab0ea8d7835e03bc093ff8fb7ab20984c74"><img src="https://external-preview.redd.it/pR8s5nJY2mwOHaj2DGAqfyrfQp9jNHKibrllvhDmk-o.jpg?auto=webp&s=e15f3ab0ea8d7835e03bc093ff8fb7ab20984c74" style="width: 40px; max-width: 100%; height: auto;" title="Grocy" /></a> <a href="https://github.com/grocy/grocy"> grocy </a></h2>
-
-<p>Grocy is a web-based self-hosted groceries & household management solution for your home.</p>
-
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/grocy/docker-compose.yaml)**
 
 <br>
 
@@ -52,19 +36,19 @@
 
 <br>
 
-<h2><a href="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg"><img src="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg" style="width: 40px; max-width: 100%; height: auto;" title="Kuma" /></a> <a href="https://github.com/louislam/uptime-kuma"> uptime-kuma </a></h2>
+<h2><a href="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/jellyfin.png"><img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/jellyfin.png" style="width: 40px; max-width: 100%; height: auto;" title="Jellyfin" /></a> <a href="https://github.com/jellyfin/jellyfin"> jellyfin </a></h2>
 
-<p>A self-hosted monitoring tool for HTTP(s) / TCP / HTTP(s) Keyword / Ping / DNS Record / Push.</p>
+<p>Jellyfin is a Free Software Media System that puts you in control of managing and streaming your media. It is an alternative to the proprietary Emby and Plex, to provide media from a dedicated server to end-user devices via multiple apps. There are no strings attached, no premium licenses or features, and no hidden agendas: just a team who want to build something better and work together to achieve it.</p>
 
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/uptime-kuma/docker-compose.yaml)**
+**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/jellyfin/docker-compose.yaml)**
 
 <br>
 
-<h2><a href="https://hay-kot.github.io/mealie/assets/img/favicon.png"><img src="https://hay-kot.github.io/mealie/assets/img/favicon.png" style="width: 40px; max-width: 100%; height: auto;" title="Mealie" /></a> <a href="https://github.com/hay-kot/mealie"> mealie </a></h2>
+<h2><a href="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg"><img src="https://raw.githubusercontent.com/louislam/uptime-kuma/742ad083e51cca7b912f4712c0154be968b933fb/public/icon.svg" style="width: 40px; max-width: 100%; height: auto;" title="Kuma" /></a> <a href="https://github.com/louislam/uptime-kuma"> kuma </a></h2>
 
-<p>Mealie is a self hosted recipe manager and meal planner with a RestAPI backend and a reactive frontend application built in Vue for a pleasant user experience for the whole family. Easily add recipes into your database by providing the url and Mealie will automatically import the relevant data or add a family recipe with the UI editor. Mealie also provides an API for interactions from 3rd party applications.</p>
+<p>A self-hosted uptime monitoring tool for HTTP(s), TCP, HTTP(s) Keyword, Ping, DNS Record, and Push requests.</p>
 
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/mealie/docker-compose.yaml)**
+**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/uptime-kuma/docker-compose.yaml)**
 
 <br>
 
@@ -76,11 +60,15 @@
 
 <br>
 
-<h2><a href="https://photoprism.app/static/icons/logo.svg"><img src="https://photoprism.app/static/icons/logo.svg" style="width: 40px; max-width: 100%; height: auto;" title="Photoprism" /></a> <a href="https://github.com/photoprism/photoprism"> photoprism </a></h2>
+<h2><a href="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/photoview.png"><img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/photoview.png" style="width: 40px; max-width: 100%; height: auto;" title="Photoview" /></a> <a href="https://github.com/photoview/photoview"> photoview </a></h2>
 
-<p>PhotoPrism is an AI-powered app for browsing, organizing & sharing your photo collection. It makes use of the latest technologies to tag and find pictures automatically without getting in your way.</p>
+<p>Photoview is a simple and user-friendly photo gallery that's made for photographers and aims to provide an easy and fast way to navigate directories, with thousands of high-resolution photos.</p>
 
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/photoprism/docker-compose.yaml)**
+<p>You configure Photoview to look for photos and videos within a directory on your file system. The scanner automatically picks up your media and start to generate thumbnail images to make browsing super fast.</p>
+
+<p>When your media has been scanned they show up on the website, organised in the same way as on the filesystem.</p>
+
+**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/photoview/docker-compose.yaml)**
 
 <br>
 
@@ -106,6 +94,16 @@
 
 <br>
 
+<h2><a href="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/qbittorrent.png"><img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/qbittorrent.png" style="width: 40px; max-width: 100%; height: auto;" title="qbittorrent" /></a> <a href="https://github.com/qbittorrent/qBittorrent"> qbittorrent </a></h2>
+
+<p>qBittorrent is a bittorrent client programmed in C++ / Qt that uses libtorrent (sometimes called libtorrent-rasterbar) by Arvid Norberg.</p>
+
+<p>It aims to be a good alternative to all other bittorrent clients out there. qBittorrent is fast, stable and provides unicode support as well as many features.</p>
+
+**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/qbittorrent/docker-compose.yaml)**
+
+<br>
+
 <h2><a href="https://avatars.githubusercontent.com/u/41993376"><img src="https://avatars.githubusercontent.com/u/41993376" style="width: 40px; max-width: 100%; height: auto;" title="Shiori" /></a> <a href="https://github.com/go-shiori/shiori"> shiori </a></h2>
 
 <p>Shiori is a simple bookmarks manager written in the Go language. Intended as a simple clone of Pocket. You can use it as a command line application or as a web application. This application is distributed as a single binary, which means it can be installed and used easily.</p>
@@ -114,21 +112,19 @@
 
 <br>
 
+<h2><a href="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/tandoorrecipes.png"><img src="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/tandoorrecipes.png" style="width: 40px; max-width: 100%; height: auto;" title="Tandoor" /></a> <a href="https://github.com/TandoorRecipes/recipes"> tandoor </a></h2>
+
+<p>This application is meant for people with a collection of recipes they want to share with family and friends or simply store them in a nicely organized way. A basic permission system exists but this application is not meant to be run as a public page.</p>
+
+**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/tandoor/docker-compose.yaml)**
+
+<br>
+
 <h2><a href="https://raw.githubusercontent.com/containrrr/watchtower/main/logo.png"><img src="https://raw.githubusercontent.com/containrrr/watchtower/main/logo.png" style="width: 40px; max-width: 100%; height: auto;" title="Watchtower" /></a> <a href="https://github.com/containrrr/watchtower"> watchtower </a></h2>
 
 <p>With watchtower you can update the running version of your containerized app simply by pushing a new image to the Docker Hub or your own image registry. Watchtower will pull down your new image, gracefully shut down your existing container and restart it with the same options that were used when it was deployed initially.</p>
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/watchtower/docker-compose.yaml)**
-
-<br>
-
-<h2><a href="https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png"><img src="https://raw.githubusercontent.com/wger-project/wger/master/wger/core/static/images/logos/logo.png" style="width: 40px; max-width: 100%; height: auto;" title="wger" /></a> <a href="https://github.com/wger-project/wger"> wger </a></h2>
-
-<p>Wger (ˈvɛɡɐ) Workout Manager is a free, open source web application that helps you manage your personal workouts, weight and diet plans and can also be used as a simple gym management utility. It offers a REST API as well, for easy integration with other projects and tools.</p>
-
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/wger/docker-compose.yaml)**
-<br>
-**[envfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/wger/prod.env)**
 
 <br>
 
