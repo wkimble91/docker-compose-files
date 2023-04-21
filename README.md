@@ -111,6 +111,8 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/jellyfin/docker-compose.yaml)**
 
+**[customcss](https://github.com/wkimble91/docker-compose-files/blob/main/compose/jellyfin/custom.css)**
+
 <br>
 
 <h2><a href="https://avatars.githubusercontent.com/u/19211038?s=200&v=4"><img
