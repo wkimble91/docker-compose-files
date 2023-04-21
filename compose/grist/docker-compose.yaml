@@ -1,0 +1,33 @@
+---
+version: "3.4"
+services:
+  grist:
+    container_name: grist
+    image: gristlabs/grist
+    restart: unless-stopped
+    volumes:
+      - /home/grist:/persist
+    environment:
+      - GRIST_SESSION_SECRET=secret-here
+      - APP_HOME_URL=https://grist.local.willkimble.net
+      - APP_DOC_URL=https://grist.local.willkimble.net
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.grist.entrypoints=http"
+      - "traefik.http.routers.grist.rule=Host(`grist.local.willkimble.net`)"
+      - "traefik.http.middlewares.grist-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.grist.middlewares=grist-https-redirect"
+      - "traefik.http.routers.grist-secure.entrypoints=https"
+      - "traefik.http.routers.grist-secure.rule=Host(`grist.local.willkimble.net`)"
+      - "traefik.http.routers.grist-secure.tls=true"
+      - "traefik.http.routers.grist-secure.service=grist"
+      - "traefik.http.services.grist.loadbalancer.server.port=8484"
+      - "traefik.docker.network=proxy"
+      - "com.centurylinklabs.watchtower.enable=true"
+      - "traefik.http.routers.grist-secure.middlewares=authelia@docker"
+
+networks:
+  proxy:
+    external: true
