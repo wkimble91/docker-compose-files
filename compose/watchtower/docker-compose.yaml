@@ -8,11 +8,15 @@ services:
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
       - /etc/timezone:/etc/timezone:ro
+    ports:
+      - PORT:8080 #Used by homepage to scrape stats
+    command: --http-api-metrics
     environment:
       - WATCHTOWER_CLEANUP=true
       - WATCHTOWER_LABEL_ENABLE=true
       - WATCHTOWER_INCLUDE_RESTARTING=true
       - WATCHTOWER_ROLLING_RESTART=true
       - WATCHTOWER_SCHEDULE=0 0 9 * * *
+      - WATCHTOWER_HTTP_API_TOKEN=thisisthewatchtowerapitoken
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
