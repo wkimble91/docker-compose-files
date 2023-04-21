@@ -1,0 +1,19 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/settings
+background: /images/waterfall.jpg
+backgroundOpacity: 0.2
+theme: dark
+color: zinc
+headerStyle: clean
+target: _blank
+hideVersion: true
+layout:
+  Notes:
+    icon: mdi-file-document-multiple
+  Media:
+    icon: mdi-home-assistant 
+  Downloaders:
+    icon: mdi-tray-arrow-down
+  Network:
+    icon: mdi-lan
