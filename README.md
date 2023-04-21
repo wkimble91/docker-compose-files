@@ -25,7 +25,7 @@
 
 **[configuration](https://github.com/wkimble91/docker-compose-files/blob/main/compose/authelia/configuration.yaml)**
 
-**[user_database](https://github.com/wkimble91/docker-compose-files/blob/main/compose/authelia/user_database.yaml)**
+**[user_database](https://github.com/wkimble91/docker-compose-files/blob/main/compose/authelia/users_database.yaml)**
 
 <br>
 
