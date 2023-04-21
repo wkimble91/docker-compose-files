@@ -242,9 +242,9 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/traefik/docker-compose.yaml)**
 
-**[configfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/traefik/config.yaml)**
+**[configfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/traefik/config.yml)**
 
-**[traefikfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/traefik/traefik.yaml)**
+**[traefikfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/traefik/traefik.yml)**
 
 <br>
 
