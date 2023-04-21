@@ -126,8 +126,6 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/nextcloud/docker-compose.yaml)**
 
-**[env](https://github.com/wkimble91/docker-compose-files/blob/main/compose/nextcloud/env)**
-
 <br>
 
 <h2><a href="https://docs.paperless-ngx.com/assets/logo.svg"><img src="https://docs.paperless-ngx.com/assets/logo.svg"
