@@ -20,6 +20,8 @@ services:
       - /Masterclass:/masterclass
       - /eBooks:/ebooks
       - /Audiobooks:/audiobooks
+    security_opt:
+      - no-new-privileges:true
     restart: unless-stopped
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
