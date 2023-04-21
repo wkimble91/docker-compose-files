@@ -1,0 +1,77 @@
+http:
+
+  routers:
+    synology:
+      entryPoints:
+        - "https"
+      rule: "Host(`synology.local.willkimble.net`)"
+      middlewares:
+        - authelia
+        - default-headers
+        - addprefix-pihole
+        - https-redirectscheme
+
+      tls: {}
+      service: synology
+
+    pihole:
+      entryPoints:
+        - "https"
+      rule: "Host(`pihole.local.willkimble.net`)"
+      middlewares:
+        - authelia
+        - default-headers
+        - addprefix-pihole
+        - https-redirectscheme
+     
+      tls: {}
+      service: pihole
+
+  services:
+    pihole:
+      loadBalancer:
+        servers:
+          - url: ""
+        passHostHeader: true
+    synology:
+      loadBalancer:
+        servers:
+          - url: ""
+        passHostHeader: true
+
+  middlewares:
+    addprefix-pihole:
+      addPrefix:
+        prefix: "/admin"
+    https-redirectscheme:
+      redirectScheme:
+        scheme: https
+        permanent: true
+    authelia:
+      forwardAuth:
+        address: "http://authelia:9091/api/verify?rd=https://auth.local.willkimble.net"
+    default-headers:
+      headers:
+        frameDeny: true
+        browserXssFilter: true
+        contentTypeNosniff: true
+        forceSTSHeader: true
+        stsIncludeSubdomains: true
+        stsPreload: true
+        stsSeconds: 15552000
+        customFrameOptionsValue: SAMEORIGIN
+        customRequestHeaders:
+          X-Forwarded-Proto: https
+
+    default-whitelist:
+      ipWhiteList:
+        sourceRange:
+        - "10.0.0.0/8"
+        - "192.168.0.0/16"
+        - "172.16.0.0/12"
+
+    secured:
+      chain:
+        middlewares:
+        - default-whitelist
+        - default-headers
