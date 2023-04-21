@@ -1,0 +1,196 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/services
+
+- Notes:
+
+- Nextcloud:
+  href: https://nextcloud.local.willkimble.net
+  description: Office Manager
+  icon: nextcloud.png
+  server: my-docker
+  container: nextcloud_app
+  widget:
+    type: nextcloud
+    url: INTERAL_IP
+    username: will
+    password: PASSWORD
+    fields: ["cpuload", "memoryusage"]
+
+- Paperless-ngx:
+  href: https://paperless-ngx.local.willkimble.net
+  description: Document Manager
+  icon: paperless.png
+  container: paperless-ngx_server
+
+- Trilium:
+  href: https://trilium.local.willkimble.net
+  description: Note Manager
+  icon: trilium.png
+  container: trilium
+
+- Grist:
+  href: https://grist.local.willkimble.net
+  description: Sheet Manager
+  icon: grist.png
+  container: grist
+
+- Vaultwarden:
+  href: https://vaultwarden.local.willkimble.net
+  description: Password Manager
+  icon: vaultwarden.png
+  container: vaultwarden
+
+- Homebox:
+  href: https://homebox.local.willkimble.net
+  description: Thing Manager
+  icon: homebox.png
+  container: homebox
+
+- Shiori:
+  href: https://shiori.local.willkimble.net
+  description: Bookmark Manager
+  icon: shiori.png
+  container: shiori
+
+
+- Media:
+
+- Tandoor:
+  href: https://tandoor.local.willkimble.net/
+  description: Recipe Manager
+  icon: tandoor.png
+  container: tandoor_app
+
+- Jellyfin:
+  href: https://jellyfin.local.willkimble.net/
+  description: Media Manager
+  icon: jellyfin.png
+  server: my-docker
+  container: jellyfin
+  widget:
+    type: jellyfin
+    url: INTERAL_IP
+    key: KEY
+    enableBlocks: true
+    enableNowPlaying: false
+    fields: ["movies", "series", "episodes"]
+
+- Immich:
+  href: https://immich.local.willkimble.net
+  description: Photo Manager
+  icon: immich.png
+  container: immich_server
+  widget:
+    type: immich
+    url: INTERAL_IP
+    key: KEY
+    fields: ["photos", "videos", "storage"]
+
+- Audiobookshelf:
+  href: https://audiobookshelf.local.willkimble.net
+  description: Book Manager
+  icon: audiobookshelf.png
+  container: audiobookshelf
+  widget:
+    type: audiobookshelf
+    url: INTERAL_IP
+    key: KEY
+    fields: ["books", "booksDuration"]
+
+- FoundryVTT:
+  href:
+  description: Virtual Table Top
+  icon: foundry-vtt.png
+  ping:
+
+
+- Downloaders:
+
+- Deluge:
+  href: https://deluge.local.willkimble.net
+  description: Downloader behind VPN
+  icon: deluge.png
+  container: deluge
+  widget:
+    type: deluge
+    url: INTERAL_IP
+    password: PASSWORD
+
+- qBittorrent:
+  href: http://192.168.1.183:8086
+  description: Downloader reachable
+  icon: qbittorrent.png
+  container: qbittorrent
+  widget:
+    type: qbittorrent
+    url: INTERAL_IP
+    username: admin
+    password: PASSWORD
+
+- Syncthing:
+  href: https://syncthing.local.willkimble.net
+  description: Syncing Relay
+  icon: syncthing.png
+  container: syncthing
+
+- Synology:
+  href:
+  description: Synology NAS
+  icon: synology.png
+  ping:
+
+- Network:
+
+- PiHole:
+  href: https://pihole.local.willkimble.net
+  description: DNS Server
+  icon: pihole.png
+  container: pihole
+  widget:
+    type: pihole
+    url: INTERAL_IP
+    key: KEY
+
+- Portainer:
+  href: https://portainer.local.willkimble.net/
+  description: Docker Monitor
+  icon: portainer.png
+  container: portainer
+  widget:
+    type: portainer
+    url: INTERAL_IP
+    env: 1
+    key: KEY
+
+- Traefik:
+  href: https://traefik-dashboard.local.willkimble.net/
+  description: Reverse Proxy SSL Provider
+  icon: traefik.png
+  container: traefik
+  widget:
+    type: traefik
+    url: INTERAL_IP
+    username: will
+    password: PASSWORD
+
+- Uptime Kuma:
+  href: https://uptime-kuma.local.willkimble.net/
+  description: Uptime Monitor
+  icon: uptime-kuma.png
+  container: uptime-kuma
+  widget:
+    type: uptimekuma
+    url: INTERAL_IP
+    slug: homepage
+
+- Watchtower:
+  icon: watchtower.png
+  widget:
+    type: watchtower
+    url: INTERAL_IP
+    key: KEY
+
+- Router:
+  href: 
+  icon: router.png
