@@ -6,5 +6,27 @@ services:
     container_name: uptime-kuma
     volumes:
       - ./data:/app/data
-    ports:
-      - x:3001
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.uptime-kuma.entrypoints=http"
+      - "traefik.http.routers.uptime-kuma.rule=Host(`uptime-kuma.local.willkimble.net`)"
+      - "traefik.http.middlewares.uptime-kuma-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.uptime-kuma.middlewares=uptime-kuma-https-redirect"
+      - "traefik.http.routers.uptime-kuma-secure.entrypoints=https"
+      - "traefik.http.routers.uptime-kuma-secure.rule=Host(`uptime-kuma.local.willkimble.net`)"
+      - "traefik.http.routers.uptime-kuma-secure.tls=true"
+      - "traefik.http.routers.uptime-kuma-secure.service=uptime-kuma"
+      - "traefik.http.services.uptime-kuma.loadbalancer.server.port=3001"
+      - "traefik.docker.network=proxy"
+      - "com.centurylinklabs.watchtower.enable=true"
+      - "traefik.http.routers.uptime-kuma-secure.middlewares=authelia@docker"
+
+networks:
+  proxy:
+    external: true
