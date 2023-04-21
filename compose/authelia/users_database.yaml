@@ -11,7 +11,7 @@ users:
     displayname: "Will"
     # Password is Authelia
     password: "" 
-    email: mail@willkimble.com
+    email: email
     groups:
       - admins
       - dev
