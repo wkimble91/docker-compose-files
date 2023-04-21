@@ -1,0 +1,35 @@
+version: "3.4"
+
+services:
+  homebox:
+    image: ghcr.io/hay-kot/homebox:latest
+    container_name: homebox
+    restart: unless-stopped
+    environment:
+    - HBOX_LOG_LEVEL=info
+    - HBOX_LOG_FORMAT=text
+    - HBOX_WEB_MAX_UPLOAD_SIZE=10
+    volumes:
+      - /mnt/{NAS}/Documents/Homebox:/data/
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.homebox.entrypoints=http"
+      - "traefik.http.routers.homebox.rule=Host(`homebox.local.willkimble.net`)"
+      - "traefik.http.middlewares.homebox-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.homebox.middlewares=homebox-https-redirect"
+      - "traefik.http.routers.homebox-secure.entrypoints=https"
+      - "traefik.http.routers.homebox-secure.rule=Host(`homebox.local.willkimble.net`)"
+      - "traefik.http.routers.homebox-secure.tls=true"
+      - "traefik.http.routers.homebox-secure.service=homebox"
+      - "traefik.http.services.homebox.loadbalancer.server.port=7745"
+      - "traefik.docker.network=proxy"
+      - "com.centurylinklabs.watchtower.enable=true"
+      - "traefik.http.routers.homebox-secure.middlewares=authelia@docker"
+
+networks:
+  proxy:
+    external: true
