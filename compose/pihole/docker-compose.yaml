@@ -1,44 +1,26 @@
 version: "3"
 
-networks:
+# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
+networks: 
   dns_net:
     driver: bridge
-    ipam:
+    ipam:    
       config:
       - subnet: 172.31.0.0/16
+  proxy:
+    external: true
 
 services:
-  pihole:
-    container_name: pihole
-    image: pihole/pihole:latest
-    networks:
-      dns_net:
-        ipv4_address: 172.31.0.6
-    ports:
-      - "53:53/tcp"
-      - "53:53/udp"
-      - "443:443/tcp"
-      - "80:80/tcp"
-    environment:
-    - 'TZ=America/Chicago'
-    - 'DNS1=172.31.0.7#5053'
-    - 'DNS2=no'
-    volumes:
-      - './etc-pihole/:/etc/pihole/'
-      - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
-    cap_add:
-      - NET_ADMIN
-    restart: unless-stopped
-    labels:
-      - "com.centurylinklabs.watchtower.enable=true"
+  #UNBOUND DNS
   unbound:
     container_name: unbound
     image: mvance/unbound:latest
     networks:
+      proxy:
       dns_net:
-        ipv4_address: 172.31.0.7
+        ipv4_address: URL #Unbound
     volumes:
-    - './unbound:/opt/unbound/etc/unbound'
+    - /home/pihole/unbound:/opt/unbound/etc/unbound
     ports:
     - "5053:5053/tcp"
     - "5053:5053/udp"
@@ -47,3 +29,61 @@ services:
     restart: unless-stopped
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
+  #PIHOLE
+  pihole:
+    container_name: pihole
+    image: pihole/pihole:latest
+    networks:
+      dns_net:
+        ipv4_address: URL #Pihole   
+    ports:
+      - "53:53/tcp"
+      - "53:53/udp"
+      - "444:443/tcp"
+      - "9980:80/tcp"
+    environment:
+    - 'TZ=America/Chicago'
+    - 'DNS1=172.31.0.7#5053' #internal unbound address
+    - 'DNS2=no'
+    - 'DOCKER_MODS=ghcr.io/gilbn/theme.park:pihole'
+    - 'TP_THEME=overseerr'
+    volumes:
+      - '/home/pihole/etc-pihole/:/etc/pihole/'
+      - '/home/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/'
+    cap_add:
+      - NET_ADMIN
+    restart: unless-stopped
+    labels:
+      - "com.centurylinklabs.watchtower.enable=true"
+  #WIREGUARD
+  wireguard:
+    depends_on: [unbound, pihole]
+    image: linuxserver/wireguard
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=America/Chicago
+      - SERVERURL= #Manually set public IP
+      - SERVERPORT=51820
+      - PEERS=myDevice
+      - PEERDNS=auto
+      - INTERNAL_SUBNET=10.13.13.0/24
+    volumes:
+      - ./wireguard:/config
+      - /lib/modules:/lib/modules
+    ports:
+      - "51820:51820/udp"
+    dns:
+      - URL # Points to pihole
+      - URL # Points to unbound
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: unless-stopped
+    networks:
+      proxy:
+      dns_net:
+        ipv4_address: URL # Wireguard
