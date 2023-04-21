@@ -138,8 +138,6 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/paperless-ngx/docker-compose.yaml)**
 
-**[env](https://github.com/wkimble91/docker-compose-files/blob/main/compose/paperless-ngx/env)**
-
 <br>
 
 <h2><a href="https://i.pinimg.com/originals/4d/a0/cc/4da0cc5c02df7ab1f8188ba01444dc8e.png"><img
