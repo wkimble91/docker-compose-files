@@ -1,0 +1,90 @@
+/* Login screen */
+/* Narrow the login form, size according to display size (bigger on mobile) */
+#loginPage .readOnlyContent, #loginPage form {max-width: 22em;}
+
+/* Hide "please login" text, margin is to prevent login form moving too far up */
+#loginPage h1 {display: none}
+#loginPage .padded-left.padded-right.padded-bottom-page {margin-top: 50px}
+
+/* Hide "manual" and "forgot" buttons */
+#loginPage .raised.cancel.block.btnManual.emby-button {display: none}
+#loginPage .raised.cancel.block.btnForgotPassword.emby-button {display: none}
+
+/* Library screens */
+/* Background color */
+.backgroundContainer {background-color: #080808;}
+
+/* Side menu and item options dialogue dark and transparent */
+.dialog {border-radius: 6px !important; background-color: rgba(0, 0, 0, 0.9);}
+.actionSheetMenuItem:hover {background-color: rgba(0, 164, 220, 0.2);}
+.mainDrawer {background-color: rgba(0, 0, 0, 0.9);}
+.navMenuOption:hover {background: rgba(0, 164, 220, 0.2);}
+
+/* Changes the entry fields, drop downs and text fields. It also adds some margin on the item page */
+.selectContainer {margin-right: 1em !important;}
+.emby-input, .emby-textarea, .emby-select-withcolor 
+{background: rgba(0, 0, 0, 0.4); border: 0.01em solid rgba(255, 255, 255, 0.22); border-radius: 6px;}
+.emby-input:focus, .emby-textarea;focus, .emby-select-withcolor:focus 
+{background: rgba(0, 0, 0, 0.8); border: 0.01em solid #00a4dcc2 !important;}
+
+/* Size episode preview images to match thumbnail ratio*/
+.listItemImage.listItemImage-large.itemAction.lazy {width: 19.56vw; height: 11vw;}
+
+/* Banner transparency and larger font */
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred {background:none; background-color:rgba(0, 0, 0, 0);}
+.skinHeader.focuscontainer-x.skinHeader-withBackground.skinHeader-blurred.noHomeButtonHeader {background:none; background-color: rgba(0, 0, 0, 0);}
+.headerTabs.sectionTabs {text-size-adjust: 110%;  font-size: 110%;}
+.pageTitle {margin-top: auto; margin-bottom: auto;}
+.emby-tab-button {padding: 1.75em 1.7em;}
+
+/* Make watched icon dark and transparent */
+.playedIndicator {background: #00000058; box-shadow: none;}
+.countIndicator {box-shadow: none;}
+
+/* Minimalistic play buttons */
+.listItemImageButton-icon {padding: 0;}
+.cardOverlayFab-primary {background-color: #00000000;}
+.cardOverlayButtonIcon {background-color: #00000000 !important;}
+
+/* Remove a bugged progress indicator on episode view page */
+.detailImageProgressContainer {display: none;}
+
+/* Make the red checkmark and likes blue */
+.playstatebutton-icon-played, .ratingbutton-icon-withrating {color: #00a4dc;}
+
+/* Hide Overview in season view */
+.secondary.listItem-overview.listItemBodyText {display: none;}
+
+/* Makes season image scroll */
+.detailImageContainer .card { position: fixed;}
+
+/* Hide crap */
+.headerCastButton { display: none; }
+.headerSyncButton { display: none; }
+.guideChannelNumber { display: none; }
+#similarCollapsible { display: none; }
+div.starRatingContainer { display: none; }
+
+/* Replace "Latest Movies" with "Recently Added Movies" */
+#homeTab > div > div.section3 > div:nth-child(1) > div.sectionTitleContainer.sectionTitleContainer-cards.padded-left > a > h2 {display: none;}
+#homeTab > div > div.section3 > div:nth-child(1) > div.sectionTitleContainer.sectionTitleContainer-cards.padded-left > a > span {display: none;}
+#homeTab > div > div.section3 > div:nth-child(1) > div.sectionTitleContainer.sectionTitleContainer-cards.padded-left > a:after {
+content: 'Recently Added Movies ›';
+font-size: 24px;
+font-weight: normal;
+}
+
+/* Replace "Latest TV" with "Recently Added TV" */
+#homeTab > div > div.section2 > div:nth-child(2) > div.sectionTitleContainer.sectionTitleContainer-cards.padded-left > a > h2 {display: none;}
+#homeTab > div > div.section2 > div:nth-child(2) > div.sectionTitleContainer.sectionTitleContainer-cards.padded-left > a > span {display: none;}
+#homeTab > div > div.section2 > div:nth-child(2) > div.sectionTitleContainer.sectionTitleContainer-cards.padded-left > a:after {
+content: 'Recently Added TV Shows ›';
+font-size: 24px;
+font-weight: normal;
+}
+
+/* Full titles */
+.cardText { white-space: normal; }
+
+/* Hide scroll buttons for main icons */
+.section0 .emby-scrollbuttons {display: none;}
