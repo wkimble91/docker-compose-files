@@ -13,10 +13,10 @@ services:
     volumes:
       - db:/var/lib/mysql
     environment:
-      - MYSQL_ROOT_PASSWORD={{ROOT_PASSWORD}}
-      - MYSQL_PASSWORD={{PASSWORD}}
-      - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=nextcloud
+      - MYSQL_ROOT_PASSWORD=$MYSQL_ROOT_PASSWORD
+      - MYSQL_PASSWORD=$MYSQL_PASSWORD
+      - MYSQL_DATABASE=$MYSQL_DATABASE
+      - MYSQL_USER=$MYSQL_USER
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
 
@@ -24,20 +24,42 @@ services:
     image: nextcloud
     restart: unless-stopped
     container_name: nextcloud_app
-    ports:
-      - {{PORT}}:80
     links:
       - db
     volumes:
       - nextcloud:/var/www/html
-      - /Pictures:/mnt/nas/Pictures:rw
-      - /Backups:/mnt/nas/Backups:rw
-      - /Files:/mnt/nas/Files:rw
-      - /Documents/Vault:/mnt/nas/Vault:rw
+      - /mnt/{NAS}/Pictures:/mnt/nas/Pictures:rw
+      - /mnt/{NAS}/Documents/.Backups:/mnt/nas/Backups:rw
+      - /mnt/{NAS}/Documents/Files:/mnt/nas/Files:rw
+      - /mnt/{NAS}/Documents/Vault:/mnt/nas/Vault:rw
     environment:
-      - MYSQL_PASSWORD={{PASSWORD}}
-      - MYSQL_DATABASE=nextcloud
-      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=$MYSQL_PASSWORD
+      - MYSQL_DATABASE=$MYSQL_DATABASE
+      - MYSQL_USER=$MYSQL_USER  
       - MYSQL_HOST=db
+      - NEXTCLOUD_TRUSTED_DOMAIN=$NEXTCLOUD_DOMAIN_NAME
+      - TRUSTED_PROXIES='192.168.1.0/24'
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - proxy
+      - default
     labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.nextcloud.entrypoints=http"
+      - "traefik.http.routers.nextcloud.rule=Host(`nextcloud.local.willkimble.net`)"
+      - "traefik.http.middlewares.nextcloud-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.nextcloud.middlewares=nextcloud-https-redirect"
+      - "traefik.http.routers.nextcloud-secure.entrypoints=https"
+      - "traefik.http.routers.nextcloud-secure.rule=Host(`nextcloud.local.willkimble.net`)"
+      - "traefik.http.routers.nextcloud-secure.tls=true"
+      - "traefik.http.routers.nextcloud-secure.service=nextcloud"
+      - "traefik.http.services.nextcloud.loadbalancer.server.port=80"
+      - "traefik.docker.network=proxy"
       - "com.centurylinklabs.watchtower.enable=true"
+      - "traefik.http.routers.nextcloud-secure.middlewares=authelia@docker"
+
+networks:
+  default:
+  proxy:
+    external: true
