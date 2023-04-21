@@ -1,0 +1,116 @@
+---
+###############################################################
+#                   Authelia configuration                    #
+###############################################################
+
+server:
+  host: 0.0.0.0
+  port: 9091
+log:
+  level: debug
+theme: dark
+# This secret can also be set using the env variables AUTHELIA_JWT_SECRET_FILE
+jwt_secret: a_very_important_secret
+default_redirection_url: https://auth.local.willkimble.net
+totp:
+  issuer: authelia.com
+
+# duo_api:
+#  hostname: api-123456789.example.com
+#  integration_key: ABCDEF
+#  # This secret can also be set using the env variables AUTHELIA_DUO_API_SECRET_KEY_FILE
+#  secret_key: 1234567890abcdefghifjkl
+
+authentication_backend:
+  file:
+    path: /config/users_database.yml
+    password:
+      algorithm: argon2id
+      iterations: 1
+      salt_length: 16
+      parallelism: 8
+      memory: 64
+      
+access_control:
+  default_policy: deny
+  rules:
+    # Rules applied to everyone
+    # BYPASS
+    #So my android app continues to work
+    - domain: audiobookshelf.local.willkimble.net
+      policy: bypass
+      #So my roku app continues to work
+    - domain: jellyfin.local.willkimble.net
+      policy: bypass
+      #So my android app continues to work
+    - domain: immich.local.willkimble.net
+      policy: bypass
+
+    # ONE_FACTOR
+    - domain: homepage.local.willkimble.net
+      policy: one_factor
+    - domain: grist.local.willkimble.net
+      policy: one_factor
+    - domain: paperless-ngx.local.willkimble.net
+      policy: one_factor
+    - domain: trilium.local.willkimble.net
+      policy: one_factor
+    - domain: uptime-kuma.local.willkimble.net
+      policy: one_factor
+    - domain: shiori.local.willkimble.net
+      policy: one_factor
+    - domain: tandoor.local.willkimble.net
+      policy: one_factor
+    - domain: deluge.local.willkimble.net
+      policy: one_factor
+
+    # TWO_FACTOR
+    - domain: traefik-dashboard.local.willkimble.net
+      policy: two_factor
+    - domain: portainer.local.willkimble.net
+      policy: two_factor
+    - domain: pihole.local.willkimble.net
+      policy: two_factor
+    - domain: syncthing.local.willkimble.net
+      policy: two_factor
+    - domain: vaultwarden.local.willkimble.net
+      policy: two_factor
+    - domain: homebox.local.willkimble.net
+      policy: two_factor
+    - domain: nextcloud.local.willkimble.net
+      policy: two_factor
+
+session:
+  name: authelia_session
+  # This secret can also be set using the env variables AUTHELIA_SESSION_SECRET_FILE
+  secret: unsecure_session_secret_goes_here
+  expiration: 3600  # 1 hour
+  inactivity: 300  # 5 minutes
+  domain: willkimble.net  # Should match whatever your root protected domain is
+
+  # redis:
+  #   host: redis
+  #   port: 6379
+  #   # This secret can also be set using the env variables AUTHELIA_SESSION_REDIS_PASSWORD_FILE
+  #   # password: authelia
+
+regulation:
+  max_retries: 5
+  find_time: 120
+  ban_time: 300
+
+storage:
+  encryption_key: encryption_key_goes_here # Now required
+  local:
+    path: /config/db.sqlite3
+
+notifier:
+  smtp:
+    username: SMTPUSERNAME
+    # This secret can also be set using the env variables AUTHELIA_NOTIFIER_SMTP_PASSWORD_FILE
+    password: SMTPPASSWORD
+    host: smtp.example.com
+    port: SMTPPORT
+    sender: admin@willkimble.net
+  #filesystem:
+  #  filename: /config/notification.txt
