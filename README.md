@@ -97,8 +97,6 @@
 
 **[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/immich/docker-compose.yaml)**
 
-**[env](https://github.com/wkimble91/docker-compose-files/blob/main/compose/immich/env)**
-
 <br>
 
 <h2><a href="https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/png/jellyfin.png"><img
