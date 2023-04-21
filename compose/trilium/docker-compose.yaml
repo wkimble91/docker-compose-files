@@ -1,0 +1,31 @@
+---
+version: "3.4"
+services:
+  trilium:
+    container_name: trilium
+    image: zadam/trilium:0.59-latest
+    restart: unless-stopped
+    volumes:
+      - /mnt/{NAS}/Documents/Trilium:/home/node/trilium-data
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - proxy
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.trilium.entrypoints=http"
+      - "traefik.http.routers.trilium.rule=Host(`trilium.local.willkimble.net`)"
+      - "traefik.http.middlewares.trilium-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.trilium.middlewares=trilium-https-redirect"
+      - "traefik.http.routers.trilium-secure.entrypoints=https"
+      - "traefik.http.routers.trilium-secure.rule=Host(`trilium.local.willkimble.net`)"
+      - "traefik.http.routers.trilium-secure.tls=true"
+      - "traefik.http.routers.trilium-secure.service=trilium"
+      - "traefik.http.services.trilium.loadbalancer.server.port=8080"
+      - "traefik.docker.network=proxy"
+      - "com.centurylinklabs.watchtower.enable=true"
+      - "traefik.http.routers.trilium-secure.middlewares=authelia@docker"
+
+networks:
+  proxy:
+    external: true
