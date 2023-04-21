@@ -2,18 +2,40 @@
 version: "2.1"
 services:
   audiobookshelf:
-    image: advplyr/audiobookshelf
+    image: ghcr.io/advplyr/audiobookshelf:latest
     container_name: audiobookshelf
     environment:
+      - AUDIOBOOKSHELF_UID=99
+      - AUDIOBOOKSHELF_GID=100
       - PUID=1000
       - PGID=1000
       - TZ=America/Chicago
     volumes:
       - ./metadata:/metadata
       - ./config:/config
-      - /mnt/x:/audiobooks
-    ports:
-      - x:80
+      - /mnt/{NAS}/Audiobooks:/audiobooks
+      - /mnt/{NAS}/eBooks:/ebooks
     restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - proxy
     labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.audiobookshelf.entrypoints=http"
+      - "traefik.http.routers.audiobookshelf.rule=Host(`audiobookshelf.local.willkimble.net`)"
+      - "traefik.http.middlewares.audiobookshelf-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.audiobookshelf.middlewares=audiobookshelf-https-redirect"
+      - "traefik.http.routers.audiobookshelf-secure.entrypoints=https"
+      - "traefik.http.routers.audiobookshelf-secure.rule=Host(`audiobookshelf.local.willkimble.net`)"
+      - "traefik.http.routers.audiobookshelf-secure.tls=true"
+      - "traefik.http.routers.audiobookshelf-secure.service=audiobookshelf"
+      - "traefik.http.services.audiobookshelf.loadbalancer.server.port=80"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.audiobookshelf-secure.middlewares=authelia@docker"
       - "com.centurylinklabs.watchtower.enable=true"
+
+
+networks:
+  proxy:
+    external: true
