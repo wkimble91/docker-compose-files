@@ -8,22 +8,41 @@ services:
       - PUID=1000
       - PGID=1000
       - TZ=America/Chicago
-      # JELLYFIN_PublishedServerUrl=192.168.0.5 #optional
+      - JELLYFIN_PublishedServerUrl=jellyfin.local.willkimble.net #optional
     volumes:
-      - /home/jellyfin/config:/config
-      - /Television:/data/tvshows
-      - /Movies:/data/movies
-      - /Commentary:/data/commentary
-      - /Anime:/data/anime
-      - /Youtube:/data/youtube
-      - /Masterclass:/data/masterclass
+      - ./config:/config
+      - /mnt/{NAS}/Videos/Television:/data/tvshows
+      - /mnt/{NAS}/Videos/Movies:/data/movies
+      - /mnt/{NAS}/Videos/Commentary:/data/commentary
+      - /mnt/{NAS}/Videos/Anime:/data/anime
+      - /mnt/{NAS}/Videos/Youtube:/data/youtube
+      - /mnt/{NAS}/Videos/Masterclass:/data/masterclass
     ports:
-      - {{PORT}}:8096
-      - {{PORT}}:8920 #optional
-      - {{PORT}}:7359/udp #optional
+      - 8096:8096/tcp
+      - 8920:8920 #optional
+      - 7359:7359/udp #optional
       # 1900:1900/udp #optional
     devices:
       - /dev/dri:/dev/dri
     restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      - proxy
     labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.jellyfin.entrypoints=http"
+      - "traefik.http.routers.jellyfin.rule=Host(`jellyfin.local.willkimble.net`)"
+      - "traefik.http.middlewares.jellyfin-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.jellyfin.middlewares=jellyfin-https-redirect"
+      - "traefik.http.routers.jellyfin-secure.entrypoints=https"
+      - "traefik.http.routers.jellyfin-secure.rule=Host(`jellyfin.local.willkimble.net`)"
+      - "traefik.http.routers.jellyfin-secure.tls=true"
+      - "traefik.http.routers.jellyfin-secure.service=jellyfin"
+      - "traefik.http.services.jellyfin.loadbalancer.server.port=8096"
+      - "traefik.docker.network=proxy"
       - "com.centurylinklabs.watchtower.enable=true"
+
+networks:
+  proxy:
+    external: true
