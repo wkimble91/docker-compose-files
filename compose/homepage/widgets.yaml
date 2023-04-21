@@ -1,0 +1,22 @@
+---
+# For configuration options and examples, please see:
+# https://gethomepage.dev/en/configs/widgets
+
+- resources:
+    label: Server
+    cpu: true
+    memory: true
+    cputemp: true
+    units: metric
+
+- datetime:
+    format:
+      timeStyle: short
+      hour12: true
+
+- openweathermap:
+    latitude: 32.91
+    longitude: -96.72
+    units: imperial
+    apiKey: KEY
+    cache: 5
