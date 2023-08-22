@@ -2,6 +2,16 @@
 <h4>A backup of my running docker containers and their project homepages.</h4>
 <br>
 
+<h2><a href="https://avatars.githubusercontent.com/u/37879538"><img src="https://avatars.githubusercontent.com/u/37879538"
+            style="width: 40px; margin-bottom: -10px; margin-right: 5px; max-width: 100%;  height: auto; border-radius: 50%;"
+            title="ActualBudget" /></a> <a href="https://github.com/actualbudget/actual"> actualbudget </a></h2>
+
+<p>Actual is a local-first personal finance tool. It is 100% free and open-source, written in NodeJS, it has a synchronization element so that all your changes can move between devices without any heavy lifting.</p>
+
+**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/actualbudget/docker-compose.yaml)**
+
+<br>
+
 <h2><a href="https://www.audiobookshelf.org/Logo.png"><img src="https://www.audiobookshelf.org/Logo.png"
             style="width: 40px; margin-bottom: -10px; margin-right: 5px; max-width: 100%;  height: auto;"
             title="Audiobookshelf" /></a> <a href="https://github.com/advplyr/audiobookshelf"> audiobookshelf </a></h2>
