@@ -102,7 +102,7 @@
 
 <h2><a href="https://avatars.githubusercontent.com/u/19211038?s=200&v=4"><img
             src="https://avatars.githubusercontent.com/u/19211038?s=200&v=4"
-            style="width: 40px; margin-bottom: -10px; margin-right: 5px; max-width: 100%;  height: auto;"
+            style="width: 40px; margin-bottom: -10px; margin-right: 5px; max-width: 100%;  height: auto; border-radius: 50%;"
             title="Nextcloud" /></a> <a href="https://github.com/nextcloud/server"> nextcloud </a></h2>
 
 <p>Nextcloud is a powerful online office suite with collaborative editing. It supports all major document, spreadsheet
@@ -131,7 +131,7 @@
             title="Pihole" /></a><a href="https://github.com/pi-hole/pi-hole"> pihole </a> | <a
         href="https://nlnetlabs.nl/static/logos/Unbound/Mark_Unbound_FC_Shaded.svg"><img
             src="https://nlnetlabs.nl/static/logos/Unbound/Mark_Unbound_FC_Shaded.svg"
-            style="width: 40px; margin-bottom: -10px; margin-right: 5px; max-width: 100%;  height: auto;"
+            style="width: 40px; margin-bottom: -10px; margin-right: 5px; max-width: 100%;  height: 40px; border-radius: 50%;"
             title="Unbound" /></a><a href="https://github.com/NLnetLabs/unbound"> unbound </a> | <a
         href="https://cdn.icon-icons.com/icons2/2699/PNG/512/wireguard_logo_icon_168760.png"><img
             src="https://cdn.icon-icons.com/icons2/2699/PNG/512/wireguard_logo_icon_168760.png"
