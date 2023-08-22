@@ -1,0 +1,32 @@
+version: '3'
+services:
+  actual_server:
+    container_name: actualbudget
+    image: actualbudget/actual-server:latest
+      # This line makes Actual available at port 5006 of the device you run the server on,
+    volumes:
+      - ./actual-data:/data
+    restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
+    networks:
+      proxy:
+#        ipv4_address: 192.168.128.82
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.actualbudget.entrypoints=http"
+      - "traefik.http.routers.actualbudget.rule=Host(`actualbudget.local.willkimble.net`)"
+      - "traefik.http.middlewares.actualbudget-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.actualbudget.middlewares=actualbudget-https-redirect"
+      - "traefik.http.routers.actualbudget-secure.entrypoints=https"
+      - "traefik.http.routers.actualbudget-secure.rule=Host(`actualbudget.local.willkimble.net`)"
+      - "traefik.http.routers.actualbudget-secure.tls=true"
+      - "traefik.http.routers.actualbudget-secure.service=actualbudget"
+      - "traefik.http.services.actualbudget.loadbalancer.server.port=5006"
+      - "traefik.docker.network=proxy"
+      - "traefik.http.routers.actualbudget-secure.middlewares=authelia@docker"
+      - "com.centurylinklabs.watchtower.enable=true"
+
+networks:
+  proxy:
+    external: true
