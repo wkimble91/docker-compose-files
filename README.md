@@ -29,31 +29,6 @@
 
 <br>
 
-<h2><a href="https://deluge-torrent.org/images/deluge_logo.png"><img
-            src="https://deluge-torrent.org/images/deluge_logo.png"
-            style="width: 40px; margin-bottom: -10px; margin-right: 5px; max-width: 100%;  height: auto;"
-            title="Deluge" /></a> <a href="https://github.com/deluge-torrent/deluge"> deluge </a></h2>
-
-<p>Deluge is a BitTorrent client that utilizes a daemon/client model. It has various user interfaces available such as
-    the GTK-UI, Web-UI and Console-UI. It uses libtorrent at its core to handle the BitTorrent protocol. Running behind
-    a VPN.</p>
-
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/deluge/docker-compose.yaml)**
-
-<br>
-
-<h2><a href="https://avatars.githubusercontent.com/u/19978005?s=200&v=4"><img
-            src="https://avatars.githubusercontent.com/u/19978005?s=200&v=4"
-            style="width: 40px; margin-bottom: -10px; margin-right: 5px; max-width: 100%;  height: auto;"
-            title="Grist" /></a> <a href="https://github.com/gristlabs/grist-core"> grist </a></h2>
-
-<p>Grist is a modern relational spreadsheet. It combines the flexibility of a spreadsheet with the robustness of a
-    database to organize your data and make you more productive.</p>
-
-**[dockerfile](https://github.com/wkimble91/docker-compose-files/blob/main/compose/grist/docker-compose.yaml)**
-
-<br>
-
 <h2><a
         href="https://raw.githubusercontent.com/hay-kot/homebox/21ad5a32c11eb9a7d6ff7332b3d9c91786673339/docs/docs/assets/img/lilbox.svg"><img
             src="https://raw.githubusercontent.com/hay-kot/homebox/21ad5a32c11eb9a7d6ff7332b3d9c91786673339/docs/docs/assets/img/lilbox.svg"
