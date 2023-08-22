@@ -1,27 +1,108 @@
 ---
-version: "2.1"
 services:
-  qbittorrent:
-    image: lscr.io/linuxserver/qbittorrent:4.4.5-r3-ls228
-    container_name: qbittorrent
-    network_mode: host
-    ports:
-      - {{PORT}}:8086
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Chicago
-      - WEBUI_PORT=8086
+  gluetun:
+    # https://github.com/qdm12/gluetun
+    image: ghcr.io/qdm12/gluetun:v3.34
+    container_name: gluetun
+    restart: unless-stopped
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
     volumes:
-      - ./config:/config
-      - /Downloads:/downloads
-      - /Television:/tv
-      - /Movies:/movie
-      - /Masterclass:/masterclass
-      - /eBooks:/ebooks
-      - /Audiobooks:/audiobooks
+      - ./gluetun:/gluetun
+    environment:
+      # See https://github.com/qdm12/gluetun/wiki
+      ## {PROVIDER} Wireguard
+      - VPN_SERVICE_PROVIDER=custom
+      - VPN_TYPE=wireguard
+      - VPN_ENDPOINT_IP={PIHOLE_IP}
+      - VPN_ENDPOINT_PORT={VPN_PORT}
+      - WIREGUARD_PUBLIC_KEY=
+      - WIREGUARD_PRIVATE_KEY=
+      - WIREGUARD_ADDRESSES=10.2.0.2/32
+      # - VPN_PORT_FORWARDING_PROVIDER={PROVIDER}
+      # - VPN_PORT_FORWARDING=on
+      # Timezone for accurate log times
+      - TZ=Etc/UTC
+      # Server list updater. See https://github.com/qdm12/gluetun/wiki/Updating-Servers#periodic-update
+      - UPDATER_PERIOD=
+      - UPDATER_VPN_SERVICE_PROVIDERS=
+      # If QBITTORRENT_SERVER address is not related to VPN_IF_NAME (default: tun0) you'll need to set the variable below
+      # - FIREWALL_OUTBOUND_SUBNETS=172.16.0.0/24
+    #ports:
+      # - 8888:8888/tcp # HTTP proxy
+      # - 8388:8388/tcp # Shadowsocks
+      # - 8388:8388/udp # Shadowsocks
+      - {Q-PORT}:8080/tcp # qBittorrent
     security_opt:
       - no-new-privileges:true
-    restart: unless-stopped
+    networks:
+      proxy:
     labels:
-      - "com.centurylinklabs.watchtower.enable=true"
+      - "traefik.enable=true"
+      - "traefik.http.routers.gluetun.entrypoints=http"
+      - "traefik.http.routers.gluetun.rule=Host(`gluetun.local.willkimble.net`)"
+      - "traefik.http.middlewares.gluetun-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.gluetun.middlewares=gluetun-https-redirect"
+      - "traefik.http.routers.gluetun-secure.entrypoints=https"
+      - "traefik.http.routers.gluetun-secure.rule=Host(`gluetun.local.willkimble.net`)"
+      - "traefik.http.routers.gluetun-secure.tls=true"
+      - "traefik.http.routers.gluetun-secure.service=gluetun"
+      - "traefik.http.services.gluetun.loadbalancer.server.port=8080"
+      - "traefik.docker.network=proxy"
+
+  qbittorrent:
+    # https://docs.linuxserver.io/images/docker-qbittorrent
+    image: lscr.io/linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    restart: unless-stopped
+    volumes:
+      - ./config:/config
+      - {LOCATION}Downloads:/downloads
+      - {LOCATION}/Television:/tv
+      - {LOCATION}/Movies:/movie
+      - {LOCATION}/Masterclass:/masterclass
+      - {LOCATION}/eBooks:/ebooks
+      - {LOCATION}/Audiobooks:/audiobooks
+      - {LOCATION}/Switch:/switch
+      - {LOCATION}/PC:/pc
+    environment:
+      - TZ=Etc/UTC
+    network_mode: "service:gluetun"
+    depends_on:
+      gluetun:
+        condition: service_healthy
+    security_opt:
+      - no-new-privileges:true
+
+  qbittorrent-natmap:
+    # https://github.com/soxfor/qbittorrent-natmap
+    image: ghcr.io/soxfor/qbittorrent-natmap:latest
+    container_name: qbittorrent-natmap
+    restart: unless-stopped
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    environment:
+      - TZ=Etc/UTC
+      - QBITTORRENT_SERVER=localhost
+      - QBITTORRENT_PORT={Q-PORT}
+      - QBITTORRENT_USER={Q-USER}
+      - QBITTORRENT_PASS={Q-PASS}
+      # - VPN_GATEWAY=
+      # - VPN_CT_NAME=gluetun
+      # - VPN_IF_NAME=tun0
+      # - CHECK_INTERVAL=300
+      # - NAT_LEASE_LIFETIME=300
+    network_mode: "service:gluetun"
+    depends_on:
+      qbittorrent:
+        condition: service_started
+      gluetun:
+        condition: service_healthy
+    security_opt:
+      - no-new-privileges:true
+
+networks:
+  proxy:
+    external: true
