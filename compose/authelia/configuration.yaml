@@ -36,38 +36,25 @@ access_control:
   rules:
     # Rules applied to everyone
     # BYPASS
-    #So my android app continues to work
     - domain: audiobookshelf.local.willkimble.net
       policy: bypass
-      #So my roku app continues to work
     - domain: jellyfin.local.willkimble.net
       policy: bypass
-      #So my android app continues to work
     - domain: immich.local.willkimble.net
+      policy: bypass
+    - domain: synology.local.willkimble.net
+      policy: bypass
+    - domain: jellyfin.local.willkimble.net
       policy: bypass
 
     # ONE_FACTOR
     - domain: homepage.local.willkimble.net
       policy: one_factor
-    - domain: grist.local.willkimble.net
-      policy: one_factor
     - domain: paperless-ngx.local.willkimble.net
-      policy: one_factor
-    - domain: trilium.local.willkimble.net
-      policy: one_factor
-    - domain: uptime-kuma.local.willkimble.net
-      policy: one_factor
-    - domain: shiori.local.willkimble.net
-      policy: one_factor
-    - domain: tandoor.local.willkimble.net
-      policy: one_factor
-    - domain: deluge.local.willkimble.net
       policy: one_factor
 
     # TWO_FACTOR
     - domain: traefik-dashboard.local.willkimble.net
-      policy: two_factor
-    - domain: portainer.local.willkimble.net
       policy: two_factor
     - domain: pihole.local.willkimble.net
       policy: two_factor
@@ -77,8 +64,11 @@ access_control:
       policy: two_factor
     - domain: homebox.local.willkimble.net
       policy: two_factor
-    - domain: nextcloud.local.willkimble.net
+    - domain: wireguard.local.willkimble.net
       policy: two_factor
+    - domain: actualbudget.local.willkimble.net
+      policy: two_factor
+
 
 session:
   name: authelia_session
