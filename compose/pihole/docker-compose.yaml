@@ -1,15 +1,4 @@
 version: "3"
-
-# More info at https://github.com/pi-hole/docker-pi-hole/ and https://docs.pi-hole.net/
-networks: 
-  dns_net:
-    driver: bridge
-    ipam:    
-      config:
-      - subnet: 172.31.0.0/16
-  proxy:
-    external: true
-
 services:
   #UNBOUND DNS
   unbound:
@@ -18,7 +7,7 @@ services:
     networks:
       proxy:
       dns_net:
-        ipv4_address: URL #Unbound
+        ipv4_address: {URL} #Unbound
     volumes:
     - /home/pihole/unbound:/opt/unbound/etc/unbound
     ports:
@@ -29,61 +18,86 @@ services:
     restart: unless-stopped
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
+      
   #PIHOLE
   pihole:
     container_name: pihole
     image: pihole/pihole:latest
     networks:
       dns_net:
-        ipv4_address: URL #Pihole   
+        ipv4_address: {URL} #Pihole   
     ports:
       - "53:53/tcp"
       - "53:53/udp"
       - "444:443/tcp"
-      - "9980:80/tcp"
+      - "{EXTERNAL_PORT}:80/tcp"
     environment:
     - 'TZ=America/Chicago'
-    - 'DNS1=172.31.0.7#5053' #internal unbound address
+    - 'DNS1=' #internal unbound address
     - 'DNS2=no'
     - 'DOCKER_MODS=ghcr.io/gilbn/theme.park:pihole'
     - 'TP_THEME=overseerr'
     volumes:
-      - '/home/pihole/etc-pihole/:/etc/pihole/'
-      - '/home/pihole/etc-dnsmasq.d/:/etc/dnsmasq.d/'
+      - './etc-pihole/:/etc/pihole/'
+      - './etc-dnsmasq.d/:/etc/dnsmasq.d/'
     cap_add:
       - NET_ADMIN
     restart: unless-stopped
     labels:
       - "com.centurylinklabs.watchtower.enable=true"
-  #WIREGUARD
-  wireguard:
+      
+  #Wireguard Easy
+  wg-easy:
     depends_on: [unbound, pihole]
-    image: linuxserver/wireguard
-    container_name: wireguard
+    image: weejewel/wg-easy
+    container_name: wg-easy
+    volumes:
+      - ./wg-easy:/etc/wireguard
+    ports:
+      - "51820:51820/udp"
+      - "51821:51821/tcp"
+    environment:
+      # ⚠ Change the server's hostname (clients will connect to):
+      - WG_HOST=
+
+      # ⚠ Change the Web UI Password:
+      - PASSWORD=
+
+      # 💡 This is the Pi-Hole Container's IP Address
+      - WG_DEFAULT_DNS=000.000.0.000
+      - WG_DEFAULT_ADDRESS=000.000.1.x
     cap_add:
       - NET_ADMIN
       - SYS_MODULE
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/Chicago
-      - SERVERURL= #Manually set public IP
-      - SERVERPORT=51820
-      - PEERS=myDevice
-      - PEERDNS=auto
-      - INTERNAL_SUBNET=10.13.13.0/24
-    volumes:
-      - ./wireguard:/config
-      - /lib/modules:/lib/modules
-    ports:
-      - "51820:51820/udp"
-    dns:
-      - URL # Points to pihole
-      - URL # Points to unbound
     sysctls:
+      - net.ipv4.ip_forward=1
       - net.ipv4.conf.all.src_valid_mark=1
     restart: unless-stopped
+    security_opt:
+      - no-new-privileges:true
     networks:
       proxy:
       dns_net:
-        ipv4_address: URL # Wireguard
+        ipv4_address: {WG_IP}
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.wireguard.entrypoints=http"
+      - "traefik.http.routers.wireguard.rule=Host(`wireguard.local.willkimble.net`)"
+      - "traefik.http.middlewares.wireguard-https-redirect.redirectscheme.scheme=https"
+      - "traefik.http.routers.wireguard.middlewares=wireguard-https-redirect"
+      - "traefik.http.routers.wireguard-secure.entrypoints=https"
+      - "traefik.http.routers.wireguard-secure.rule=Host(`wireguard.local.willkimble.net`)"
+      - "traefik.http.routers.wireguard-secure.tls=true"
+      - "traefik.http.routers.wireguard-secure.service=wireguard"
+      - "traefik.http.services.wireguard.loadbalancer.server.port=51821"
+      - "traefik.docker.network=proxy"
+      - "com.centurylinklabs.watchtower.enable=true"
+
+networks:
+  dns_net:
+    driver: bridge
+    ipam:
+      config:
+      - subnet: {X.X}.0.0/24
+  proxy:
+    external: true
