@@ -1,19 +1,6 @@
 http:
 
   routers:
-    synology:
-      entryPoints:
-        - "https"
-      rule: "Host(`synology.local.willkimble.net`)"
-      middlewares:
-        - authelia
-        - default-headers
-        - addprefix-pihole
-        - https-redirectscheme
-
-      tls: {}
-      service: synology
-
     pihole:
       entryPoints:
         - "https"
@@ -29,11 +16,6 @@ http:
 
   services:
     pihole:
-      loadBalancer:
-        servers:
-          - url: ""
-        passHostHeader: true
-    synology:
       loadBalancer:
         servers:
           - url: ""
